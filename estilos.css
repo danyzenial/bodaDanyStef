@@ -1,76 +1,496 @@
 :root {
-  --accent: #f59e0b;
-  --bg: #fff;
-  --text: #1A237E;
-  --muted: #666;
+    --bg: #000000;
+    --accent: #f59e0b;
+    --muted: #ffffff;
+    --realse: white;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: white;
+    color: #e6eef8;
+    line-height: 1.6;
+    overflow-x: hidden
 }
 
-/* Secciones */
 section {
-  min-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+h1,
+h2 {
+    margin-bottom: 16px;
+    font-weight: 1;
+    
+}
+
+.highlight {
+    color: var(--realse);
+    font-weight: 500;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.note {
+    color: var(--muted)!important;
+    font-size: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #071428;
+    background: var(--accent);
+    font-weight: 700
+}
+
+
+.s1 {
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centra verticalmente */
+    align-items: center;      /* centra horizontalmente */
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* Fondo borroso */
+.s1 .fondo {
+    position: absolute;
+    top: 0; left: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+    z-index: -2;
+}
+
+/* Overlay oscuro */
+.s1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+.s1::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 120px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #fff 100%);
+    z-index: 0;
+}
+
+
+/* Contenido encima del fondo */
+.s1 h1, .s1 p, .s1 .logo {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+/* Logo responsive */
+.s1 .logo {
+    width: 100%;        /* ocupa todo el ancho de su contenedor */
+    height: auto;       /* mantiene proporción */
+}
+
+.s1 h1{
+    font-size: 25px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* Indicador tipo círculo */
+.scroll-indicator {
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 0.9rem;
+    opacity: 0.8;
+   
+}
+
+/* Círculo (mouse shape) */
+.scroll-indicator::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 15px;
+    opacity: 0.7;
+    position: relative;
+}
+
+/* Puntito animado dentro del círculo */
+.scroll-indicator .dot {
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(12px); opacity: 0; }
+}
+
+/* Texto sutil */
+.scroll-text {
+    font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.95;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    
+}
+
+.s2 {
+    background: #ffffff;
+    color: #1A237E;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+/*CALNDARIO*/
+
+.calendar-title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.calendar-landscape {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  padding: 25px 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  font-family: "Roboto Condensed", sans-serif;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.date-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+.weekday {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.day-month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+}
+
+.month {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.year-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.year {
+  font-size: 14px;
+  color: #666;
+}
+
+.time {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 2px;
+}
+
+.note {
+  font-size: 18px;
+  color: #555;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+
+/* Animación al cargar (fade + slide) */
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-title,
+.animate-calendar,
+.animate-note {
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+/* Retardo para animación escalonada */
+.animate-calendar { animation-delay: 0.3s; }
+.animate-note { animation-delay: 0.6s; }
+
+/* Bounce infinito para el día */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-day {
+  display: inline-block;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Pulso suave en borde del calendario */
+@keyframes pulseBorder {
+  0%, 100% { box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+  50% { box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+}
+
+.animate-calendar {
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-name: fadeSlideUp, pulseBorder;
+  animation-duration: 1s, 2s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease, ease-in-out;
+}
+
+
+
+/**/
+
+/*UBICACION*/
+.location-title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #3EC1B0; /* verde turquesa pastel */
   text-align: center;
-  padding: 20px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+  animation: fadeSlideUp 1s ease forwards;
 }
-section.visible { opacity: 1; transform: translateY(0); }
 
-/* Hero */
-.hero { position: relative; }
-.hero-bg {
-  position: absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;
-  filter: blur(2px); z-index:-1;
+/* Tarjeta navy */
+.location-card {
+  background: #102542; /* navy suave */
+  border-radius: 14px;
+  padding: 25px 30px;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
 }
-.hero-content { position: relative; z-index:1; }
-.hero h1 { font-family: 'Roboto Condensed', sans-serif; font-size: 2rem; color:#fff; text-shadow:0 0 8px rgba(0,0,0,0.6);}
-.highlight { color: var(--accent); }
-.note { color:#fff; font-style:italic; margin-top:10px; }
 
-/* Indicador scroll */
-.scroll-indicator { position:absolute; bottom:20px; display:flex; flex-direction:column; align-items:center; gap:5px; }
-.scroll-indicator .dot { width:5px; height:5px; border-radius:50%; background:#fff; animation:scroll 1.5s infinite;}
-@keyframes scroll {0%{transform:translateY(0);opacity:1;}100%{transform:translateY(12px);opacity:0;}}
-
-/* Botones */
-.btn, .btn-map {
-  display:inline-block; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600; transition:0.3s;
+/* Información del lugar */
+.location-info h3 {
+  font-size: 22px;
+  color: #3EC1B0; /* verde turquesa pastel */
+  margin-bottom: 8px;
 }
-.btn { background: var(--accent); color:#071428; }
-.btn-map { background:#3EC1B0; color:#102542; }
-.btn-map:hover { background:#36b0a0; transform:translateY(-2px); }
 
-/* Section titles minimal */
+.location-info p {
+  font-size: 16px;
+  color: #FFFFFF; /* blanco para contraste */
+  margin: 2px 0;
+  text-align: center;
+}
+
+/* Botón Google Maps */
+.btn-map {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #102542; /* navy */
+  background: #3EC1B0; /* verde turquesa pastel */
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-map:hover {
+  background: #36b0a0;
+  transform: translateY(-2px);
+}
+
+/* Animaciones */
+.animate-card {
+  animation-name: fadeSlideUp, pulseShadow;
+  animation-duration: 1s, 2s;
+  animation-iteration-count: 1, infinite;
+  animation-timing-function: ease, ease-in-out;
+}
+
+/*CONTADOR*/
+.cuentaRegresiva{
+    background-color: #17A589;
+    color: white;
+    margin-top: -35px;
+    border-radius: 15px;
+    padding-top: 30px;
+    margin-bottom: 35px;
+}
+
+/*****/
+/* Título minimalista con líneas */
 .section-title {
-  display:flex; align-items:center; gap:15px; font-family:'Roboto Condensed'; font-weight:600; font-size:1.5rem;
-  margin:40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    gap: 15px; /* espacio entre líneas y texto */
+    margin-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-.section-title .line { flex:1; height:2px; background:#ccc; border-radius:1px; animation:linePulse 2s ease-in-out infinite;}
-@keyframes linePulse {0%,100%{transform:scaleX(1);opacity:1;}50%{transform:scaleX(1.1);opacity:0.8;}}
 
-/* Calendario */
-.calendar-card { background:#fff; padding:20px 30px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.12); margin-bottom:20px; }
-.date-info { display:flex; align-items:center; gap:20px; }
-.weekday { text-transform:uppercase; font-size:0.9rem; color:var(--muted); }
-.day { font-size:2rem; font-weight:700; color:var(--accent); animation:bounce 1.5s infinite; }
-.month { text-transform:uppercase; font-size:1rem; color:var(--accent);}
-.time { font-size:1rem; font-weight:600; color:var(--text);}
-@keyframes bounce {0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    gap: 15px; /* espacio entre líneas y texto */
+    margin-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
-/* Location card */
-.location-card { background:#102542; color:#fff; border-radius:14px; padding:25px; max-width:400px; margin:20px auto; display:flex; flex-direction:column; gap:10px; }
-.location-card h3 { color:#3EC1B0; margin-bottom:5px; }
-.location-card p { font-size:0.95rem; }
+/* Líneas horizontales */
+.section-title .line {
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background-color: #ccc; /* color gris minimal */
+    border-radius: 1px;
+    animation: linePulse 2s ease-in-out infinite; /* animación opcional */
+}
+
+/* Animación sutil de “respiración” para las líneas */
+@keyframes linePulse {
+    0%, 100% { transform: scaleX(1); opacity: 1; }
+    50% { transform: scaleX(1.1); opacity: 0.8; }
+}
+
+
+/**Prueba de carrito*/
+.container {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.road-container {
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Carrito */
+.container-svg {
+  width: 200px;
+  margin: 50px auto;
+  position: relative;
+}
+
+/* Puntos de la carretera */
+.road-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #999;
+  border-radius: 50%;
+  pointer-events: none;
+}
