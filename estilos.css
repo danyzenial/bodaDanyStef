@@ -31,7 +31,6 @@ section {
     padding: 0px;
     text-align: center;
     opacity: 0;
-    transform: translateY(40px);
     transition: all 1s ease;
 
 }
@@ -120,7 +119,7 @@ section.visible {
     text-align: center;
     font-family: Arial, sans-serif;
     overflow: hidden;
-    margin-bottom: 5px;
+    
 }
 
 
@@ -155,6 +154,7 @@ section.visible {
     margin-top: -8vh;
     position: absolute;
     z-index: 2;
+    margin-bottom: 5px;
 }
 
 .infoCard .title-card{
@@ -239,6 +239,7 @@ section.visible {
   color: #333;
   margin-top: 2px;
 }
+
 
 
 
