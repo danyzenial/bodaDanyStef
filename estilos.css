@@ -120,6 +120,7 @@ section.visible {
     text-align: center;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 
@@ -238,6 +239,7 @@ section.visible {
   color: #333;
   margin-top: 2px;
 }
+
 
 
 
