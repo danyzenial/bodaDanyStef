@@ -1,221 +1,85 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Daniel & Stafany - Boda</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
 
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto+Condensed:wght@300;400;600;700&family=Mea+Culpa&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="estilos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=partner_heart,today" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
+
+    <link href="/css/estilos.css" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- Sección Hero -->
-  <section class="s1">
-    <img src="images/pareja1.jpeg" class="fondo" alt="Pareja feliz">
-    <h1>Nos <span class="highlight">Casamos</span></h1>
-    <img src="images/Logo Blanco.png" class="logo" alt="Logo de la boda">
-    <p class="note">y queremos que seas parte de este momento</p>
-
-    <div class="scroll-indicator">
-      <div class="dot"></div>
-      <span class="scroll-text">Desliza hacia abajo</span>
-    </div>
-  </section>
-
-  <!-- Sección Fecha y Ubicación -->
-  <section class="s2">
-
-    <h2 class="section-title">
-      <span class="line"></span>
-      <i class="fa fa-calendar"></i>
-      <span class="line"></span>
-    </h2>
-
-    <div class="calendar-landscape animate-calendar">
-      <div class="date-info">
-        <div class="weekday">Sábado</div>
-        <div class="day-month">
-          <span class="day animate-day">06</span>
-          <span class="month">Diciembre</span>
+    <section class="s1">
+        <div class="blur-negro"></div>
+    </section>
+    <section class="s2">
+        <div>
+            <h4>
+                nos
+            </h4>
+            <h1>casamos</h1>
+            <p>...y queremos que seas parte de este momento tan especial.</p>
         </div>
-        <div class="year-time">
+        <div class="cardDate">
+            <div class="imgCard">
+                <img src="images/pareja1.jpeg" alt="">
+            </div>
+            <div class="infoCard">
 
-          <span class="time">04:00 PM</span>
+                <div class="title-card">
+
+                    <span>¿Cuándo nos vemos?</span>
+                </div>
+
+                <div class="calendar-landscape animate-calendar">
+                    <div class="date-info">
+                        <div class="weekday">Sábado</div>
+                        <div class="day-month">
+                            <span class="day animate-day">06</span>
+                            <span class="month">Diciembre</span>
+                        </div>
+                        <div class="year-time">
+
+                            <span class="time">04:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Countdown -->
-    <div class="cuentaRegresiva">
-      <span>FALTAN</span>
-      <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Tegucigalpa"
-        data-language="es" data-textcolor="#ffffff" data-date="2025-12-06 16:00" data-unitscolor="#ffffff">-</a>
-    </div>
-
-    <h2 class="section-title">
-      <span class="line"></span>
-      <i class="fa fa-map-marker"></i>
-      <span class="line"></span>
-    </h2>
-
-    <div id="car-section" class="container" style="position: relative; width: 200px; height: 400px; margin: 50px auto;">
-      <svg width="200" height="400">
-        <path id="road" d="M100,0 C50,100 150,200 100,400" stroke="transparent" fill="transparent" />
-      </svg>
-
-      <i class="fa fa-car" id="car" style="position:absolute; font-size:30px; color:#328FCD;"></i>
-    </div>
-
-
-
-
-    <div class="location-card animate-card">
-      <div class="location-info">
-        <h3>El Mirador</h3>
-        <p>El Hatillo, Francisco Morazán</p>
-      </div>
-      <div class="location-map">
-        <a href="https://maps.app.goo.gl/TwaLaAbocrYbMga98" target="_blank" class="btn-map">Ver en Google Maps</a>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Sección Lugar -->
-  <section>
-    <h2>📍 Lugar</h2>
-    <p>El evento se realizará en <strong>Salón La Esperanza</strong>, con un ambiente elegante y acogedor para compartir
-      con todos.</p>
-  </section>
-
-  <!-- Sección Indicaciones -->
-  <section>
-    <h2>ℹ️ Indicaciones</h2>
-    <p>El salón está ubicado en la carretera principal. Habrá señalización y personal guiando en la entrada.
-      <br>Estacionamiento gratuito disponible.
-    </p>
-  </section>
-
-  <!-- Sección Regalo -->
-  <section>
-    <h2>🎁 Regalo</h2>
-    <p>Tu presencia es lo más importante, pero si deseas, puedes colaborar con un <strong>regalo en efectivo</strong> en
-      un sobre especial que estará disponible en la entrada.</p>
-  </section>
-
-  <!-- Sección Hora y Confirmación -->
-  <section>
-    <h2>⏰ Hora</h2>
-    <p>La cita es el <strong>08 de noviembre de 2025</strong> a las <strong>7:00 PM</strong>. ¡No llegues tarde, será un
-      momento único!</p>
-    <a href="#" class="btn">Confirmar Asistencia</a>
-  </section>
-
-  <!-- Animación al hacer scroll -->
-  <script>
-    const sections = document.querySelectorAll('section');
-    const reveal = () => {
-      const trigger = window.innerHeight * 0.85;
-      sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < trigger) sec.classList.add('visible');
-      });
-    };
-    window.addEventListener('scroll', reveal);
-    reveal();
-  </script>
-  <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-  <script>
-
-
-    const section = document.getElementById('car-section');
-    let animationStarted = false;
-
-    const car = document.getElementById('car');
-    const path = document.getElementById('road');
-    const pathLength = path.getTotalLength();
-    const duration = 4000;
-    let startTime;
-
-    const svg = path.parentNode;
-    const numHearts = 25;
-    const hearts = [];
-
-    for (let i = 0; i <= numHearts; i++) {
-      const t = i / numHearts;
-      const point = path.getPointAtLength(t * pathLength);
-
-      const heart = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      heart.setAttribute("x", point.x);
-      heart.setAttribute("y", point.y);
-      heart.setAttribute("text-anchor", "middle");
-      heart.setAttribute("alignment-baseline", "middle");
-      heart.setAttribute("font-size", "10");
-      heart.setAttribute("fill", "#f59e0b");
-      heart.setAttribute("opacity", 0);
-      heart.textContent = "♥";
-
-      svg.appendChild(heart);
-      hearts.push({ element: heart, position: t });
-    }
-
-    function animateCar(time) {
-      if (!startTime) startTime = time;
-      const elapsed = (time - startTime) % duration;
-      const t = elapsed / duration;
-      const point = path.getPointAtLength(t * pathLength);
-
-      const containerRect = svg.getBoundingClientRect();
-      const scaleX = containerRect.width / 200;
-      const scaleY = containerRect.height / 400;
-
-      car.style.left = `${point.x * scaleX - car.offsetWidth / 2}px`;
-      car.style.top = `${point.y * scaleY - car.offsetHeight / 2}px`;
-
-      hearts.forEach(h => {
-        const distance = t - h.position;
-        if (distance >= 0 && distance <= 0.1) {
-          h.element.setAttribute('opacity', distance * 10);
-        } else if (distance > 0.1 && distance <= 0.3) {
-          h.element.setAttribute('opacity', 1 - (distance - 0.1) / 0.2);
-        } else {
-          h.element.setAttribute('opacity', 0);
-        }
-      });
-
-      requestAnimationFrame(animateCar);
-    }
-
-    // Detectar cuando la sección aparece
-    function checkSectionVisible() {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && !animationStarted) {
-        animationStarted = true;
-        requestAnimationFrame(animateCar);
-      }
-    }
-
-    window.addEventListener('scroll', checkSectionVisible);
-    checkSectionVisible(); // también chequea al cargar la página
-
-
-
-  </script>
+    </section>
+    <section></section>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const reveal = () => {
+            const trigger = window.innerHeight * 0.85;
+            sections.forEach(sec => {
+                const top = sec.getBoundingClientRect().top;
+                if (top < trigger) sec.classList.add('visible');
+            });
+        };
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
 </body>
 
-
 </html>
-
-
-
-
-
