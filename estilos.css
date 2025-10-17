@@ -1,7 +1,7 @@
 :root {
     --bg: #000000;
     --accent: #f59e0b;
-    --muted: #ffffff;
+    --muted: #8d8d8d;
     --realse: white;
     --colorPrincipal: #138D75;
 }
@@ -14,7 +14,7 @@
 
 body {
     font-family: Inter, system-ui, Arial, sans-serif;
-    background: rgb(255, 255, 255);
+    background: var(--colorPrincipal);
     color: #0073ff;
     line-height: 1.6;
     overflow-x: hidden
@@ -32,7 +32,6 @@ section {
     text-align: center;
     opacity: 0;
     transition: all 1s ease;
-
 }
 
 section.visible {
@@ -44,14 +43,15 @@ section.visible {
     background-image: url(images/pareja1.jpeg);
     border-radius: 0px 0px 400px 400px; 
     background-size: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
 }
 
 .s1 img{
     width: 100%;
     height: 100%;
-
 }
 
+/*
 .blur-negro {
     position: absolute;
     bottom: 0;
@@ -62,7 +62,7 @@ section.visible {
     filter: blur(20px); 
     pointer-events: none; 
     border-radius: 0px 0px 400px 400px; 
-}
+}*/
 
 /* Decoraci[on section 2 */
 
@@ -76,21 +76,23 @@ section.visible {
     border-radius: 400px 400px 80px 80px; 
     color: white;
     overflow: hidden;
-    
+
 }
 
+/*
 .s2::before {
     content: "";
     position: absolute;
-    top: 5px;     /* distancia desde arriba */
-    left: 5px;    /* distancia desde la izquierda */
-    right: 5px;   /* distancia desde la derecha */
-    bottom: 5px;  /* distancia desde abajo */
-    border-radius: 400px 400px 80px 80px; /* ligeramente menor que la sección */
-    border: 5px solid white;       /* línea blanca interna */
+    top: 5px;    
+    left: 5px;    
+    right: 5px;   
+    bottom: 5px; 
+    border-radius: 400px 400px 80px 80px; 
+    border: 5px solid white;   
     box-sizing: border-box;
     pointer-events: none;
 }
+*/
 
 
 .s2 h4{
@@ -129,11 +131,13 @@ section.visible {
 
 
 .imgCard{
-    width: 90%;          /* tamaño máximo de la imagen */
+    width: 70%;          /* tamaño máximo de la imagen */
     height: 300px;
-    margin: 0 auto 50px;  /* centrada horizontalmente */
+    margin: 0 auto;  /* centrada horizontalmente */
     overflow: hidden;     /* recorta la imagen si es más grande */
     border-radius: 25px;   /* opcional: circular */
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
 }
 
 .imgCard img{
@@ -245,6 +249,109 @@ section.visible {
   text-align: center;
 }
 
+/* Cards */
+  .card {
+
+    padding:16px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    overflow:hidden;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Countdown card style */
+  .countdown {
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,248,248,0.98));
+    padding:18px;
+    border-radius:16px;
+    position:relative;
+    border-radius: 40px;
+    margin-bottom: 50px;
+  }
+  .countdown h4 {
+    font-family: "Great Vibes", cursive;
+    margin:0 0 8px 0;
+    font-size:24px;
+    color: #1f5e57;
+  }
+  .time-row {
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    margin-top:8px;
+  }
+  .time-block{
+    flex:1;
+    background:linear-gradient(180deg,#fff,#f7f7f7);
+    border-radius:12px;
+    padding:12px 8px;
+    text-align:center;
+    margin-right:8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06) inset;
+  }
+  .time-block:last-child{margin-right:0;}
+  .time-number{ font-size:20px; font-weight:700; color:#145045; }
+  .time-label{ font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.6px; }
 
 
+ /* location card */
+.location{
+    border-radius: 40px;
+    margin-bottom: 50px;
+    background-color: #EFE9DD;
+}
+
+.location h4{
+    color:var(--colorPrincipal)!important;
+    font-family: "Great Vibes", cursive;
+    font-weight: 600;
+    font-size: 2rem!important;
+    text-align: left;
+    margin-left: 20px!important;
+}
+
+  .location-card{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .map {
+    flex:1;
+    min-height:86px;
+    border-radius:12px;
+    background:linear-gradient(180deg,#f2f2f2,#e9e9e9);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:13px;
+    position:relative;
+    overflow:hidden;
+  }
+  .map .pin {
+    position:absolute;
+    right:10px;
+    top:10px;
+    background:var(--accent);
+    color:white;
+    padding:6px;
+    border-radius:8px;
+    font-size:12px;
+    box-shadow:0 6px 10px rgba(0,0,0,0.12);
+  }
+  .loc-info { min-width:140px; }
+
+  .btn {
+    display:inline-block;
+    background:var(--colorPrincipal);
+    font-family: "Zain", sans-serif;
+    color:#fff;
+    padding:10px 14px;
+    border-radius:28px;
+    text-decoration:none;
+    font-weight:100;
+    box-shadow: 0 8px 18px rgba(47,106,99,0.22);
+    margin-top:10px;
+    font-size: 1.2rem;
+  }
 
