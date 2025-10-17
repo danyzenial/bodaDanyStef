@@ -92,34 +92,18 @@
             <h4 id="location-title" style="margin:0 0 8px 0;font-size:20px;color:#23564e">Lugar</h4>
             <div class="location-card">
                 <div class="loc-info">
-                    <div style="font-weight:700">El Mirador, el Hatillo</div>
-                    <div class="muted" style="margin-top:6px;">Calle Falsa 123</div>
+                    <div>El Mirador</div>
                     <a class="btn" href="https://maps.app.goo.gl/TwaLaAbocrYbMga98" target="_blank">Ver
                         Ubicación</a>
                 </div>
                 <div class=" map" aria-hidden="true">
                     <!-- Aquí puedes reemplazar por un iframe de Google Maps o una imagen estática -->
-                    <span><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1191.939477994641!2d-87.17302976622672!3d14.130618559900203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fa3461c1d0663%3A0xc6901db94a3f8da5!2sEl%20Mirador!5e0!3m2!1ses-419!2shn!4v1760676122656!5m2!1ses-419!2shn"
-                            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe></span>
+                    <span><img src="images/map.png" alt=""></span>
                     <div class="pin">📍</div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        const sections = document.querySelectorAll('section');
-        const reveal = () => {
-            const trigger = window.innerHeight * 0.85;
-            sections.forEach(sec => {
-                const top = sec.getBoundingClientRect().top;
-                if (top < trigger) sec.classList.add('visible');
-            });
-        };
-        window.addEventListener('scroll', reveal);
-        reveal();
-    </script>
     <script>
         // === Cuenta regresiva ===
         // Ajusta la fecha destino aquí:
