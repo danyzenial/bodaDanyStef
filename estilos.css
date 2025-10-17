@@ -72,7 +72,6 @@ section.visible {
     background-color: var(--colorPrincipal);
     margin-top:-15vh;
     position: relative;
-    z-index: -1;
     border-radius: 400px 400px 80px 80px; 
     color: white;
     overflow: hidden;
@@ -354,4 +353,5 @@ section.visible {
     margin-top:10px;
     font-size: 1.2rem;
   }
+
 
