@@ -30,7 +30,7 @@ section {
     align-items: center;
     padding: 0px;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: all 1s ease;
 }
 
@@ -40,10 +40,14 @@ section.visible {
 }
 
 .s1{
-    background-image: url(images/pareja1.jpeg);
-    border-radius: 0px 0px 400px 400px; 
-    background-size: cover;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
+     position: relative;
+  background-image: url(images/pareja1.jpeg);
+  border-radius: 0 0 400px 400px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: visible; /* 🔑 evita que recorte lo de abajo */
+  z-index: 2; /* queda visualmente arriba */
 }
 
 .s1 img{
@@ -69,13 +73,21 @@ section.visible {
 
 
 .s2{
-    background-color: var(--colorPrincipal);
-    margin-top:-15vh;
-    position: relative;
-    border-radius: 400px 400px 80px 80px; 
-    color: white;
-    overflow: hidden;
+   position: relative;
+  margin-top: -12vh; /* se mete un poquito debajo */
+  border-radius: 400px 400px 80px 80px;
+  color: white;
+  overflow: hidden;
+  z-index: 1; /* está debajo visualmente, pero aún clicable */
+}
 
+.s2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--colorPrincipal);
+  border-radius: inherit;
+  z-index: -1; /* el fondo sí está atrás */
 }
 
 /*
@@ -298,6 +310,7 @@ section.visible {
     border-radius: 40px;
     margin-bottom: 50px;
     background-color: #EFE9DD;
+    
 }
 
 .location h4{
@@ -306,7 +319,7 @@ section.visible {
     font-weight: 600;
     font-size: 2rem!important;
     text-align: left;
-    margin-left: 20px!important;
+    margin-left: 35px!important;
 }
 
   .location-card{
@@ -331,7 +344,7 @@ section.visible {
     position:absolute;
     right:10px;
     top:10px;
-    background:var(--accent);
+    background:white;
     color:white;
     padding:6px;
     border-radius:8px;
@@ -339,6 +352,14 @@ section.visible {
     box-shadow:0 6px 10px rgba(0,0,0,0.12);
   }
   .loc-info { min-width:140px; }
+
+  .loc-info div{
+    font-weight:400;
+    font-family: "Zain", sans-serif; 
+    color: #262626;
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
   .btn {
     display:inline-block;
@@ -352,6 +373,6 @@ section.visible {
     box-shadow: 0 8px 18px rgba(47,106,99,0.22);
     margin-top:10px;
     font-size: 1.2rem;
+    margin-left: 0.5rem;
   }
-
 
