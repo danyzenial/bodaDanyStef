@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=partner_heart,today" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
+
+    <link href="estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="s1">
+        <div class="blur-negro"></div>
+    </section>
+    <div class="s2">
+        <div>
+            <h4>
+                nos
+            </h4>
+            <h1>casamos</h1>
+            <p>...y queremos que seas parte de este momento tan especial.</p>
+        </div>
+        <div class="cardDate">
+            <div class="imgCard">
+                <img src="images/pareja1.jpeg" alt="">
+            </div>
+            <div class="infoCard">
+
+                <div class="title-card">
+                    <span>¿Cuándo?</span>
+                </div>
+
+                <div class="calendar-landscape animate-calendar">
+                    <div class="date-info">
+                        <div class="weekday">Sábado</div>
+                        <div class="day-month">
+                            <span class="day animate-day">06</span>
+                            <span class="month">Diciembre</span>
+                        </div>
+                        <div class="year-time">
+
+                            <span class="time">04:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card countdown" aria-labelledby="countdown-title">
+            <h4 id="countdown-title">Cuenta regresiva para el gran día</h4>
+            <div class="time-row" role="timer" aria-live="polite">
+                <div class="time-block">
+                    <div id="days" class="time-number">000</div>
+                    <div class="time-label">días</div>
+                </div>
+                <div class="time-block">
+                    <div id="hours" class="time-number">000</div>
+                    <div class="time-label">Horas</div>
+                </div>
+                <div class="time-block">
+                    <div id="minutes" class="time-number">00</div>
+                    <div class="time-label">Minutos</div>
+                </div>
+                <div class="time-block">
+                    <div id="seconds" class="time-number">400</div>
+                    <div class="time-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+        <!-- Location Card -->
+        <div class="card location" aria-labelledby="location-title">
+            <img src="images/pareja1.jpeg" alt="Foto" class="location-notificacion">
+            <h4 id="location-title" style="margin:0 0 8px 0;font-size:20px;color:#23564e">Lugar</h4>
+            <div class="location-card">
+                <div class="loc-info">
+                    <div>El Mirador</div>
+                    <a class="btn" href="https://maps.app.goo.gl/TwaLaAbocrYbMga98" target="_blank">Ver
+                        Ubicación</a>
+                </div>
+                <div class=" map" aria-hidden="true">
+                    <!-- Aquí puedes reemplazar por un iframe de Google Maps o una imagen estática -->
+                    <span><img src="images/map.png" alt=""></span>
+                    <div class="pin">📍</div>
+                </div>
+            </div>
+            <div class="location-hours">
+                <i class="fas fa-clock"></i> <span class="location-hour">4:00 pm</span><span
+                    class="location-description">Recibiendo Invitados</span> <br>
+                <i class="fas fa-heart"></i> <span class="location-hour">4:30 pm</span><span
+                    class="location-description"></span>Ceremonia<br>
+                <i class="fas fa-glass-cheers"></i> <span class="location-hour">6:00 pm</span><span
+                    class="location-description">Recepción</span> <br>
+            </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="cardress dress" aria-labelledby="dress-title">
+            <div class="dress-fila">
+                <h4 id="dress" class="dress-h4">Vestimenta</h4>
+                <div class="dress-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+            </div>
+            <div class="dress-card">
+                <div class="dress-info">
+                    <div>Una noche para celebrar el amor merece su mejor elegancia. <br>
+                        Agradecemos su presencia con atuendo formal.</div>
+                </div>
+            </div>
+            <div class="dress-footer">
+                Les pedimos con cariño evitar el color blanco en sus atuendos.
+            </div>
+        </div>
+
+    </div>
+    <script>
+        // === Cuenta regresiva ===
+        // Ajusta la fecha destino aquí:
+        // Formato: new Date(YYYY, MM-1, DD, HH, MIN, SEC)
+        // Actualmente: 6 Diciembre, 16:00 (ajusta zona horaria del cliente)
+        const targetDate = new Date(new Date().getFullYear(), 11, 6, 16, 0, 0);
+
+        function pad(n, digits = 2) {
+            return n.toString().padStart(digits, '0');
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            let diff = Math.max(0, targetDate - now);
+
+            // calcular
+            const secondsTotal = Math.floor(diff / 1000);
+            const days = Math.floor(secondsTotal / (3600 * 24));
+            const hours = Math.floor((secondsTotal % (3600 * 24)) / 3600);
+            const minutes = Math.floor((secondsTotal % 3600) / 60);
+            const seconds = secondsTotal % 60;
+
+            // Mostrar con formato similar al mockup
+            document.getElementById('days').textContent = pad(days, 3);
+            document.getElementById('hours').textContent = pad(hours, 3);
+            document.getElementById('minutes').textContent = pad(minutes, 2);
+            document.getElementById('seconds').textContent = pad(seconds, 3); // se muestra con 3 cifras para reproducir "400"
+        }
+
+        updateCountdown();
+        // Actualiza cada segundo
+        setInterval(updateCountdown, 1000);
+
+        // === Map button: abre Google Maps con dirección (ajusta si hace falta) ===
+        function openMaps(e) {
+            e.preventDefault();
+            const address = encodeURIComponent('Jardines La Esperanza Calle Falsa 123');
+            // abre la app/Google Maps
+            const uri = `https://www.google.com/maps/search/?api=1&query=${address}`;
+            window.open(uri, '_blank');
+        }
+
+        // Accessibility: if JS desactiva, deja valores por defecto
+    </script>
+</body>
+
+</html>
