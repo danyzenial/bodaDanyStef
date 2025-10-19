@@ -36,7 +36,7 @@ section {
 
 section.visible {
     opacity: 1;
-    transform: translateY(0)
+
 }
 
 .s1{
@@ -179,7 +179,7 @@ section.visible {
 .infoCard .title-card{
     text-align: left;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: "Zain", sans-serif;
     color: #ffffff;
     background-color: var(--colorPrincipal);
@@ -193,7 +193,7 @@ section.visible {
 
 .infoCard .title-card span{
     padding-left: 5px;
-    font-family: "Zain", sans-serif;
+    font-family: "Great Vibes", cursive;
 }
 
 
@@ -277,12 +277,13 @@ section.visible {
     border-radius:16px;
     position:relative;
     border-radius: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
   }
   .countdown h4 {
     font-family: "Great Vibes", cursive;
     margin:0 0 8px 0;
-    font-size:24px;
+    font-size:1.8rem;
     color: #1f5e57;
   }
   .time-row {
@@ -310,7 +311,8 @@ section.visible {
     border-radius: 40px;
     margin-bottom: 50px;
     background-color: #EFE9DD;
-    
+    position: relative;
+    overflow: visible;
 }
 
 .location h4{
@@ -320,6 +322,7 @@ section.visible {
     font-size: 2rem!important;
     text-align: left;
     margin-left: 35px!important;
+    margin-top: 15px!important;
 }
 
   .location-card{
@@ -376,3 +379,105 @@ section.visible {
     margin-left: 0.5rem;
   }
 
+  .location-hours{
+    background-color: white;
+    color: var(--colorPrincipal);
+    padding: 15px;
+    border-radius: 20px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .location-hours .location-hour{
+  font-family:"Great Vibes", cursive;
+  font-size: 1.38rem;
+  margin-left: 5px;
+}
+
+  .location-hours .location-description{
+  font-family: "Zain", sans-serif;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+.location-notificacion {
+position: absolute;
+  top: -145px;   /* valor negativo para que sobresalga */
+  right: -20px; /* sobresale hacia afuera */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  background-color: white; /* por si la imagen tiene fondo transparente */
+}
+
+/* CARD DRESS*/
+
+ .cardress {
+
+    padding:16px 0px 0px 0px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    overflow:hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+  
+
+.dress{
+    border-radius: 50px;
+    margin-bottom: 50px;
+    background-color: #97bbaf;
+    position: relative;
+    overflow: visible;
+}
+
+.dress h4{
+    color:white!important;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 2rem!important;
+    text-align: left;
+    margin-left: 30px!important;
+    margin-top: 15px!important;
+}
+
+ .dress-info div{
+    font-weight:lighter;
+    font-family: "Zain", sans-serif; 
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 30px;
+    line-height: 1.2rem;
+  }
+
+  .dress-fila{
+    display: flex;
+    justify-content: space-between; /* separa texto e icono */
+  }
+
+.dress-fila .dress-icon{
+    background-color: white;
+    color: var(--colorPrincipal);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.dress-footer{
+  background-color: white;
+  border-radius: 0px 0px 55px 55px;
+  color: var(--colorPrincipal);
+  font-family: "Zain", sans-serif; 
+  padding: 15px 30px 15px 30px;
+  text-align: center;
+  font-weight: 500;
+  width: 100%!important;
+  line-height: 1.2rem;
+  font-size: 1.1rem;
+}
