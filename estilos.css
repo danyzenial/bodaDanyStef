@@ -338,7 +338,7 @@ section.visible {
 /* location card */
 .location {
   border-radius: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   background-color: #EFE9DD;
   position: relative;
   overflow: visible;
@@ -640,4 +640,5 @@ section.visible {
     width: 90%;
     margin: auto;
 }
+
 
