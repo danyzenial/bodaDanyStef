@@ -31,7 +31,6 @@ section {
   padding: 0px;
   text-align: center;
   opacity: 1;
-  transition: all 1s ease;
 }
 
 section.visible {
@@ -338,7 +337,7 @@ section.visible {
 /* location card */
 .location {
   border-radius: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
   background-color: #EFE9DD;
   position: relative;
   overflow: visible;
@@ -455,7 +454,7 @@ section.visible {
 /* CARD DRESS*/
 
 .cardress {
-
+  margin-top: 90px!important;
   padding: 16px 0px 0px 0px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
   overflow: hidden;
