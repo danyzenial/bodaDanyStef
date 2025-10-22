@@ -32,7 +32,9 @@
     <section class="s1">
         <div class="blur-negro"></div>
     </section>
+
     <div class="s2">
+        <!-- mensaje -->
         <div>
             <h4>
                 nos
@@ -40,6 +42,8 @@
             <h1>casamos</h1>
             <p>...y queremos que seas parte de este momento tan especial.</p>
         </div>
+
+        <!-- date Card -->
         <div class="cardDate">
             <div class="imgCard">
                 <img src="images/pareja1.jpeg" alt="">
@@ -65,6 +69,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- countdown Card -->
         <div class="card countdown" aria-labelledby="countdown-title">
             <h4 id="countdown-title">Cuenta regresiva para el gran día</h4>
             <div class="time-row" role="timer" aria-live="polite">
@@ -86,6 +92,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Location Card -->
         <div class="card location" aria-labelledby="location-title">
             <img src="images/pareja1.jpeg" alt="Foto" class="location-notificacion">
@@ -114,7 +121,7 @@
             </div>
         </div>
 
-        <!-- Location Card -->
+        <!-- Dress Card -->
         <div class="cardress dress" aria-labelledby="dress-title">
             <div class="dress-fila">
                 <h4 id="dress" class="dress-h4">Vestimenta</h4>
@@ -174,11 +181,12 @@
             </div>
         </div>
 
+        <!-- gift Card -->
         <div class="giftcard gift" aria-labelledby="gift-title">
             <div class="gift-notificacion">
                 <i class="fas fa-gifts"></i>
             </div>
-            <h3 id="gift" class="gift-h4">Regalo Obligatorio</h3>
+            <h3 id="gift" class="gift-h3">Regalo Obligatorio</h3>
             <h4 id="gift" class="gift-h4">¡Tu presencia!</h4>
             <div class="dress-card">
                 <div class="gift-info">
@@ -194,6 +202,29 @@
                     </span>
                     <div class="gift-2">
                         <i class="fas fa-envelope"></i> Sobres en Recepción
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- rsvp Card -->
+        <div class="rsvpcard rsvp" aria-labelledby="rsvp-title">
+            <h4 id="rsvp" class="rsvp-h4">Queremos celebrar contigo</h4>
+            <div class="rsvp-card">
+                <div class="rsvp-info">
+                    <div>Confirma a la pareja</div>
+                </div>
+                <div class="rsvp-description">
+                    <div class="rsvp-1" onclick="window.open('https://wa.me/50497792881','_blank')">
+                        <i class="fab fa-whatsapp"></i> <span>Daniel</span>
+                    </div>
+                    <div class="rsvp-2" onclick="window.open('https://wa.me/50488517942','_blank')">
+                        <i class="fab fa-whatsapp"></i> <span>Stefany</span>
+                    </div>
+                    <div class="rsvp-footer">
+                        <div class="rsvp-footer-info-1">Dar clic sobre cualquiera de los novios para abrir WhatsApp y
+                            confirmar tu asistencia.</div>
+                        <div class="rsvp-footer-info-2">Tienen hasta el 01 de Noviembre para confirmar</div>
                     </div>
                 </div>
             </div>
@@ -225,10 +256,10 @@
             const seconds = secondsTotal % 60;
 
             // Mostrar con formato similar al mockup
-            document.getElementById('days').textContent = pad(days, 3);
-            document.getElementById('hours').textContent = pad(hours, 3);
+            document.getElementById('days').textContent = pad(days, 2);
+            document.getElementById('hours').textContent = pad(hours, 2);
             document.getElementById('minutes').textContent = pad(minutes, 2);
-            document.getElementById('seconds').textContent = pad(seconds, 3); // se muestra con 3 cifras para reproducir "400"
+            document.getElementById('seconds').textContent = pad(seconds, 2); // se muestra con 3 cifras para reproducir "400"
         }
 
         updateCountdown();
