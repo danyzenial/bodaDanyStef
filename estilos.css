@@ -294,14 +294,14 @@ section.visible {
 .countdown h4 {
   font-family: "Great Vibes", cursive;
   margin: 0 0 8px 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #1f5e57;
 }
 
 .time-row {
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: 2px;
   margin-top: 8px;
 }
 
@@ -477,8 +477,8 @@ section.visible {
   font-weight: 400;
   font-size: 2.4rem !important;
   text-align: left;
-  margin-left: 30px !important;
-  margin-top: 15px !important;
+  margin-left: 25px !important;
+  margin-top: 5px !important;
 }
 
 .dress-info div {
@@ -640,3 +640,155 @@ section.visible {
     margin: auto;
 }
 
+/*RSVP CARD*/
+.rsvpcard {
+  padding: 16px 0px 0px 0px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rsvp {
+  border-radius: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  position: relative;
+  overflow: visible;
+  padding-bottom: 25px;
+}
+
+.rsvp h4 {
+  color: var(--colorPrincipal) !important;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 1.8rem !important;
+  text-align: center;
+  margin-top: 5px !important;
+}
+
+.rsvp-info {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.rsvp-info div {
+  font-weight: 400;
+  font-family: "Zain", sans-serif;
+  color: #262626;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.rsvp-description {
+  font-weight: 600;
+  font-family: "Great Vibes", cursive;
+  color: var(--colorPrincipal);
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.rsvp-description .rsvp-1 i{
+  margin-right: 5px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  padding: 10px 12px 10px 12px;
+  background-color: #00ACC1;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.rsvp-description .rsvp-1{
+  text-align: center;
+  font-weight: lighter;
+  width: 90%;
+  margin: auto;
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.rsvp-description .rsvp-1 span{
+  font-family: "Great Vibes", cursive;
+  background-color: #00ACC1;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding-right: 40px;
+  padding-left: 35px;
+  margin-left: -25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.rsvp-description .rsvp-2{
+  text-align: center;
+  font-weight: lighter;
+  width: 90%;
+  margin: auto;
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.rsvp-description .rsvp-2 i{
+  margin-right: 5px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  padding: 10px 12px 10px 12px;
+  background-color: #e29d96;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.rsvp-description .rsvp-2 span{
+  font-family: "Great Vibes", cursive;
+  background-color: #e29d96;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding-right: 40px;
+  padding-left: 35px;
+  margin-left: -25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.rsvp-footer{
+  margin-top: 28px;
+}
+
+.rsvp-footer .rsvp-footer-info-1{
+  font-weight: 400;
+  font-family: "Zain", sans-serif;
+  color: #262626;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.rsvp-footer .rsvp-footer-info-2{
+  margin-top: 25px;
+  font-weight: 500;
+  font-family: "Zain", sans-serif;
+  color: var(--colorPrincipal);
+  font-size: 14px;
+  text-align: center;
+  background-color: #edebe7;
+  border-radius: 25px;
+  padding: 10px;
+  line-height: 20px;
+}
