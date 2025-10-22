@@ -1,58 +1,59 @@
 :root {
-    --bg: #000000;
-    --accent: #f59e0b;
-    --muted: #8d8d8d;
-    --realse: white;
-    --colorPrincipal: #138D75;
+  --bg: #000000;
+  --accent: #f59e0b;
+  --muted: #8d8d8d;
+  --realse: white;
+  --colorPrincipal: #138D75;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
 }
 
 body {
-    font-family: Inter, system-ui, Arial, sans-serif;
-    background: var(--colorPrincipal);
-    color: #0073ff;
-    line-height: 1.6;
-    overflow-x: hidden
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--colorPrincipal);
+  color: #0073ff;
+  line-height: 1.6;
+  overflow-x: hidden
 }
 
 /* Decoraci[on section 1 */
 
 section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    text-align: center;
-    opacity: 1;
-    transition: all 1s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  text-align: center;
+  opacity: 1;
 }
 
 section.visible {
-    opacity: 1;
+  opacity: 1;
 
 }
 
-.s1{
-     position: relative;
+.s1 {
+  position: relative;
   background-image: url(images/pareja1.jpeg);
   border-radius: 0 0 400px 400px;
   background-size: cover;
   background-position: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  overflow: visible; /* 🔑 evita que recorte lo de abajo */
-  z-index: 2; /* queda visualmente arriba */
+  overflow: visible;
+  /* 🔑 evita que recorte lo de abajo */
+  z-index: 2;
+  /* queda visualmente arriba */
 }
 
-.s1 img{
-    width: 100%;
-    height: 100%;
+.s1 img {
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -72,13 +73,15 @@ section.visible {
 
 
 
-.s2{
-   position: relative;
-  margin-top: -12vh; /* se mete un poquito debajo */
+.s2 {
+  position: relative;
+  margin-top: -12vh;
+  /* se mete un poquito debajo */
   border-radius: 400px 400px 80px 80px;
   color: white;
   overflow: hidden;
-  z-index: 1; /* está debajo visualmente, pero aún clicable */
+  z-index: 1;
+  /* está debajo visualmente, pero aún clicable */
 }
 
 .s2::before {
@@ -87,7 +90,8 @@ section.visible {
   inset: 0;
   background-color: var(--colorPrincipal);
   border-radius: inherit;
-  z-index: -1; /* el fondo sí está atrás */
+  z-index: -1;
+  /* el fondo sí está atrás */
 }
 
 /*
@@ -106,94 +110,100 @@ section.visible {
 */
 
 
-.s2 h4{
-    margin-top: 20vh;
-    font-weight: lighter;
-    font-size: 5vh;  
-    text-align: center;
+.s2 h4 {
+  margin-top: 20vh;
+  font-weight: lighter;
+  font-size: 5vh;
+  text-align: center;
 }
 
-.s2 h1{
-    font-weight: 100;
-    font-size: 14vh;
-    font-family: "Great Vibes";
-    line-height: 0.3;
-    text-align: center;
+.s2 h1 {
+  font-weight: 100;
+  font-size: 14vh;
+  font-family: "Great Vibes";
+  line-height: 0.3;
+  text-align: center;
 }
 
-.s2 p{
-    margin-top: 2vh;
-    font-weight: 400;   
-    font-weight: lighter;
-    font-size: 2.2vh;
-    font-family: "Zain", sans-serif;
-    padding: 5vh;
-    line-height: 1;
-    text-align: center;
+.s2 p {
+  margin-top: 2vh;
+  font-weight: 400;
+  font-weight: lighter;
+  font-size: 2.2vh;
+  font-family: "Zain", sans-serif;
+  padding: 5vh;
+  line-height: 1;
+  text-align: center;
 }
 
 /* Decoración section 2 Carta de Fecha */
 .cardDate {
-    width: 100%;            /* ancho del card */
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+  width: 100%;
+  /* ancho del card */
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 
 
-.imgCard{
-    width: 70%;          /* tamaño máximo de la imagen */
-    height: 300px;
-    margin: 0 auto;  /* centrada horizontalmente */
-    overflow: hidden;     /* recorta la imagen si es más grande */
-    border-radius: 25px;   /* opcional: circular */
-    margin-bottom: 1rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
+.imgCard {
+  width: 70%;
+  /* tamaño máximo de la imagen */
+  height: 300px;
+  margin: 0 auto;
+  /* centrada horizontalmente */
+  overflow: hidden;
+  /* recorta la imagen si es más grande */
+  border-radius: 25px;
+  /* opcional: circular */
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5)
 }
 
-.imgCard img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    /* mantiene proporciones y recorta si es necesario */
-    display: block;
+.imgCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* mantiene proporciones y recorta si es necesario */
+  display: block;
 }
 
-.infoCard{
-    width: 80%;
-    background-color: white;
-    padding: 1.5rem 2rem;
-    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-    border-radius: 40px 40px 40px 40px;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    color: red;
-    margin-top: -8vh;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 4rem;
-    
+.infoCard {
+  width: 80%;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 40px 40px 40px 40px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  color: red;
+  margin-top: -8vh;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 4rem;
+
 }
 
 
-.infoCard .title-card{
-    text-align: left;
-    display: block;
-    font-size: 1.2rem;
-    font-family: "Zain", sans-serif;
-    color: #ffffff;
-    background-color: var(--colorPrincipal);
-    border-radius: 1vh;
-    text-align: center;
-    align-items: center; 
-    justify-content: center;
-    display: flex;
-    padding: 1vh;
+.infoCard .title-card {
+  text-align: left;
+  display: block;
+  font-size: 1.2rem;
+  font-family: "Zain", sans-serif;
+  color: #ffffff;
+  background-color: var(--colorPrincipal);
+  border-radius: 1vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 1vh;
 }
 
-.infoCard .title-card span{
-    padding-left: 5px;
-    font-family: "Great Vibes", cursive;
+.infoCard .title-card span {
+  padding-left: 5px;
+  font-family: "Great Vibes", cursive;
 }
 
 
@@ -261,224 +271,524 @@ section.visible {
 }
 
 /* Cards */
-  .card {
+.card {
 
-    padding:16px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
-    overflow:hidden;
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  /* Countdown card style */
-  .countdown {
-    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,248,248,0.98));
-    padding:18px;
-    border-radius:16px;
-    position:relative;
-    border-radius: 40px;
-    margin-bottom: 100px;
-    padding-bottom: 50px;
-  }
-  .countdown h4 {
-    font-family: "Great Vibes", cursive;
-    margin:0 0 8px 0;
-    font-size:1.8rem;
-    color: #1f5e57;
-  }
-  .time-row {
-    display:flex;
-    justify-content:space-between;
-    gap:8px;
-    margin-top:8px;
-  }
-  .time-block{
-    flex:1;
-    background:linear-gradient(180deg,#fff,#f7f7f7);
-    border-radius:12px;
-    padding:12px 8px;
-    text-align:center;
-    margin-right:8px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.06) inset;
-  }
-  .time-block:last-child{margin-right:0;}
-  .time-number{ font-size:20px; font-weight:700; color:#145045; }
-  .time-label{ font-size:11px; color:var(--muted); margin-top:6px; text-transform:uppercase; letter-spacing:0.6px; }
-
-
- /* location card */
-.location{
-    border-radius: 40px;
-    margin-bottom: 50px;
-    background-color: #EFE9DD;
-    position: relative;
-    overflow: visible;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.location h4{
-    color:var(--colorPrincipal)!important;
-    font-family: "Great Vibes", cursive;
-    font-weight: 600;
-    font-size: 2rem!important;
-    text-align: left;
-    margin-left: 35px!important;
-    margin-top: 15px!important;
+/* Countdown card style */
+.countdown {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 248, 248, 0.98));
+  padding: 18px;
+  border-radius: 16px;
+  position: relative;
+  border-radius: 40px;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
 }
 
-  .location-card{
-    display:flex;
-    gap:12px;
-    align-items:center;
-  }
-  .map {
-    flex:1;
-    min-height:86px;
-    border-radius:12px;
-    background:linear-gradient(180deg,#f2f2f2,#e9e9e9);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--muted);
-    font-size:13px;
-    position:relative;
-    overflow:hidden;
-  }
-  .map .pin {
-    position:absolute;
-    right:10px;
-    top:10px;
-    background:white;
-    color:white;
-    padding:6px;
-    border-radius:8px;
-    font-size:12px;
-    box-shadow:0 6px 10px rgba(0,0,0,0.12);
-  }
-  .loc-info { min-width:140px; }
+.countdown h4 {
+  font-family: "Great Vibes", cursive;
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+  color: #1f5e57;
+}
 
-  .loc-info div{
-    font-weight:400;
-    font-family: "Zain", sans-serif; 
-    color: #262626;
-    font-size: 1.5rem;
-    text-align: center;
-  }
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  margin-top: 8px;
+}
 
-  .btn {
-    display:inline-block;
-    background:var(--colorPrincipal);
-    font-family: "Zain", sans-serif;
-    color:#fff;
-    padding:10px 14px;
-    border-radius:28px;
-    text-decoration:none;
-    font-weight:100;
-    box-shadow: 0 8px 18px rgba(47,106,99,0.22);
-    margin-top:10px;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-  }
+.time-block {
+  flex: 1;
+  background: linear-gradient(180deg, #fff, #f7f7f7);
+  border-radius: 12px;
+  padding: 12px 8px;
+  text-align: center;
+  margin-right: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06) inset;
+}
 
-  .location-hours{
-    background-color: white;
-    color: var(--colorPrincipal);
-    padding: 15px;
-    border-radius: 20px;
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+.time-block:last-child {
+  margin-right: 0;
+}
 
-  .location-hours .location-hour{
-  font-family:"Great Vibes", cursive;
+.time-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #145045;
+}
+
+.time-label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+
+/* location card */
+.location {
+  border-radius: 40px;
+  margin-bottom: 40px;
+  background-color: #EFE9DD;
+  position: relative;
+  overflow: visible;
+}
+
+.location h4 {
+  color: var(--colorPrincipal) !important;
+  font-family: "Great Vibes", cursive;
+  font-weight: 600;
+  font-size: 2rem !important;
+  text-align: left;
+  margin-left: 35px !important;
+  margin-top: 10px !important;
+}
+
+.location-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.map {
+  flex: 1;
+  min-height: 86px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f2f2f2, #e9e9e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map .pin {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: white;
+  color: white;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.loc-info {
+  min-width: 140px;
+}
+
+.loc-info div {
+  font-weight: 400;
+  font-family: "Zain", sans-serif;
+  color: #262626;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--colorPrincipal);
+  font-family: "Zain", sans-serif;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 28px;
+  text-decoration: none;
+  font-weight: 100;
+  box-shadow: 0 8px 18px rgba(47, 106, 99, 0.22);
+  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.location-hours {
+  background-color: white;
+  color: var(--colorPrincipal);
+  padding: 15px;
+  border-radius: 20px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.location-hours .location-hour {
+  font-family: "Great Vibes", cursive;
   font-size: 1.38rem;
   margin-left: 5px;
 }
 
-  .location-hours .location-description{
+.location-hours .location-description {
   font-family: "Zain", sans-serif;
   font-size: 1.2rem;
   margin-left: 5px;
 }
 
 .location-notificacion {
-position: absolute;
-  top: -145px;   /* valor negativo para que sobresalga */
-  right: -20px; /* sobresale hacia afuera */
+  position: absolute;
+  top: -145px;
+  /* valor negativo para que sobresalga */
+  right: -20px;
+  /* sobresale hacia afuera */
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  background-color: white; /* por si la imagen tiene fondo transparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  /* por si la imagen tiene fondo transparente */
 }
 
 /* CARD DRESS*/
 
- .cardress {
-
-    padding:16px 0px 0px 0px;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
-    overflow:hidden;
-    width: 80%;
-    margin: 0 auto;
-}
-  
-
-.dress{
-    border-radius: 50px;
-    margin-bottom: 50px;
-    background-color: #97bbaf;
-    position: relative;
-    overflow: visible;
+.cardress {
+  margin-top: 90px!important;
+  padding: 16px 0px 0px 0px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.dress h4{
-    color:white!important;
-    font-family: "Great Vibes", cursive;
-    font-weight: 400;
-    font-size: 2rem!important;
-    text-align: left;
-    margin-left: 30px!important;
-    margin-top: 15px!important;
+
+.dress {
+  border-radius: 50px;
+  margin-bottom: 100px;
+  background-color: #97bbaf;
+  position: relative;
+  overflow: visible;
 }
 
- .dress-info div{
-    font-weight:lighter;
-    font-family: "Zain", sans-serif; 
-    color: #ffffff;
-    font-size: 1.2rem;
-    text-align: justify;
-    margin: 10px 30px 0px 30px;
-    line-height: 1.8rem;
-    padding: 20px 20px 20px 20px;
-  }
-
-  .dress-fila{
-    display: flex;
-    justify-content: space-between; /* separa texto e icono */
-  }
-
-.dress-fila .dress-icon{
-    background-color: white;
-    color: var(--colorPrincipal);
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
-    margin-right: 30px;
-    margin-top: 15px;
+.dress h4 {
+  color: rgb(255, 255, 255) !important;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 2.4rem !important;
+  text-align: left;
+  margin-left: 25px !important;
+  margin-top: 5px !important;
 }
 
-.dress-footer{
+.dress-info div {
+  font-weight: lighter;
+  font-family: "Zain", sans-serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: -20px 30px 5px 30px;
+  line-height: 1.8rem;
+  padding: 20px 20px 20px 20px;
+}
+
+.dress-fila {
+  display: flex;
+  justify-content: space-between;
+  /* separa texto e icono */
+}
+
+.dress-fila .dress-icon {
+  background-color: white;
+  color: var(--colorPrincipal);
+  padding: 32px 18px 32px 18px;
+  border-radius: 100%;
+  margin-right: 12px;
+  margin-top: -50px;
+  margin-bottom: 20px !important;
+  position: relative;
+}
+
+.dress-footer {
   background-color: white;
   border-radius: 0px 0px 55px 55px;
   color: var(--colorPrincipal);
-  font-family: "Zain", sans-serif; 
-  padding: 15px 30px 15px 30px;
+  font-family: "Zain", sans-serif;
+  padding: 15px 35px 15px 35px;
   text-align: center;
   font-weight: 500;
-  width: 100%!important;
+  width: 100% !important;
   line-height: 1.2rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+#Capa_1 {
+  margin-right: -15px;
+}
+/*GIFT CARD*/
+.giftcard {
+  padding: 16px 0px 0px 0px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.gift {
+  border-radius: 50px;
+  margin-bottom: 50px;
+  background-color: #EFE9DD;
+  position: relative;
+  overflow: visible;
+  padding-bottom: 25px;
+}
+
+.gift h3 {
+  color: var(--colorPrincipal) !important;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 1.5rem !important;
+  text-align: center;
+  margin-left: 0px !important;
+  margin-top: 20px !important;
+}
+
+.gift h4 {
+  color: var(--colorPrincipal) !important;
+  font-family: "Zain", sans-serif;
+  font-weight: 600;
+  font-size: 2.8rem !important;
+  text-align: center;
+  margin-left: 0px !important;
+  margin-top: 0cm !important;
+  line-height: 35px;
+}
+
+.gift-notificacion {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -60px;
+  font-size: 3rem;
+  color: var(--colorPrincipal);
+}
+
+.gift-notificacion i {
+  background-color: white;
+  border-radius: 100%;
+  padding: 30px 25px 30px 25px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.gift-info {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.gift-info div {
+  font-weight: 400;
+  font-family: "Zain", sans-serif;
+  color: #262626;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.gift-description {
+  font-weight: 600;
+  font-family: "Great Vibes", cursive;
+  color: var(--colorPrincipal);
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.gift-description i{
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+
+.gift-description .gift-1 div{
+  text-align: center;
+  font-family: "Zain", sans-serif;
+  font-weight: lighter;
+  background-color: var(--colorPrincipal);
+  width: 90%;
+  margin: auto;
+  color: white;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 3px;
+}
+
+
+.gift-description .gift-2{
+  margin-top: 15px;
+}
+
+#course_divider hr {
+    background-color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+    border-radius: 100px;
+    height: 2px;
+    width: 90%;
+    margin: auto;
+}
+
+/*RSVP CARD*/
+.rsvpcard {
+  padding: 16px 0px 0px 0px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rsvp {
+  border-radius: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  position: relative;
+  overflow: visible;
+  padding-bottom: 25px;
+}
+
+.rsvp h4 {
+  color: var(--colorPrincipal) !important;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-size: 1.8rem !important;
+  text-align: center;
+  margin-top: 5px !important;
+}
+
+.rsvp-info {
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.rsvp-info div {
+  font-weight: 400;
+  font-family: "Zain", sans-serif;
+  color: #262626;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.rsvp-description {
+  font-weight: 600;
+  font-family: "Great Vibes", cursive;
+  color: var(--colorPrincipal);
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.rsvp-description .rsvp-1 i{
+  margin-right: 5px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  padding: 10px 12px 10px 12px;
+  background-color: #00ACC1;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.rsvp-description .rsvp-1{
+  text-align: center;
+  font-weight: lighter;
+  width: 90%;
+  margin: auto;
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.rsvp-description .rsvp-1 span{
+  font-family: "Great Vibes", cursive;
+  background-color: #00ACC1;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding-right: 40px;
+  padding-left: 35px;
+  margin-left: -25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.rsvp-description .rsvp-2{
+  text-align: center;
+  font-weight: lighter;
+  width: 90%;
+  margin: auto;
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.rsvp-description .rsvp-2 i{
+  margin-right: 5px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  padding: 10px 12px 10px 12px;
+  background-color: #e29d96;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.rsvp-description .rsvp-2 span{
+  font-family: "Great Vibes", cursive;
+  background-color: #e29d96;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding-right: 40px;
+  padding-left: 35px;
+  margin-left: -25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.rsvp-footer{
+  margin-top: 28px;
+}
+
+.rsvp-footer .rsvp-footer-info-1{
+  font-weight: 400;
+  font-family: "Zain", sans-serif;
+  color: #262626;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.rsvp-footer .rsvp-footer-info-2{
+  margin-top: 25px;
+  font-weight: 500;
+  font-family: "Zain", sans-serif;
+  color: var(--colorPrincipal);
+  font-size: 14px;
+  text-align: center;
+  background-color: #edebe7;
+  border-radius: 25px;
+  padding: 10px;
+  line-height: 20px;
 }
