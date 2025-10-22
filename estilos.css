@@ -696,7 +696,7 @@ section.visible {
 
 .rsvp-description .rsvp-1 i{
   margin-right: 5px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   border-radius: 50%;
   padding: 10px 12px 10px 12px;
   background-color: #00ACC1;
@@ -714,7 +714,7 @@ section.visible {
   color: black;
   border-radius: 25px;
   margin-bottom: 15px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 2px;
 }
 
@@ -725,8 +725,8 @@ section.visible {
   padding-top: 8px;
   padding-bottom: 2px;
   padding-right: 40px;
-  padding-left: 35px;
-  margin-left: -25px;
+  padding-left: 40px;
+  margin-left: -40px;
   border-radius: 25px;
   text-align: center;
 }
@@ -745,7 +745,7 @@ section.visible {
 
 .rsvp-description .rsvp-2 i{
   margin-right: 5px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   border-radius: 50%;
   padding: 10px 12px 10px 12px;
   background-color: #e29d96;
@@ -762,10 +762,11 @@ section.visible {
   padding-top: 8px;
   padding-bottom: 2px;
   padding-right: 40px;
-  padding-left: 35px;
-  margin-left: -25px;
+  padding-left: 40px;
+  margin-left: -40px;
   border-radius: 25px;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .rsvp-footer{
@@ -785,7 +786,7 @@ section.visible {
   font-weight: 500;
   font-family: "Zain", sans-serif;
   color: var(--colorPrincipal);
-  font-size: 1.2rem;
+  font-size: 1.rem;
   text-align: center;
   background-color: #edebe7;
   border-radius: 25px;
