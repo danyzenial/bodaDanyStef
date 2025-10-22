@@ -785,10 +785,10 @@ section.visible {
   font-weight: 500;
   font-family: "Zain", sans-serif;
   color: var(--colorPrincipal);
-  font-size: 14px;
+  font-size: 1.2rem;
   text-align: center;
   background-color: #edebe7;
   border-radius: 25px;
-  padding: 10px;
+  padding: 10px 30px 10px 30px;
   line-height: 20px;
 }
