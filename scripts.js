@@ -57,10 +57,10 @@ function updateCarousel(newIndex) {
   //memberRole.style.opacity = "0";
 
   setTimeout(() => {
-    memberName.textContent = teamMembers[currentIndex].name;
-    memberRole.textContent = teamMembers[currentIndex].role;
-    memberName.style.opacity = "1";
-    memberRole.style.opacity = "1";
+    //memberName.textContent = teamMembers[currentIndex].name;
+    //memberRole.textContent = teamMembers[currentIndex].role;
+    //memberName.style.opacity = "1";
+    //memberRole.style.opacity = "1";
   }, 300);
 
   setTimeout(() => {
@@ -117,7 +117,7 @@ function createScrollIndicator() {
 }
 
 // Initialize scroll indicator
-createScrollIndicator();
+//createScrollIndicator();
 
 document.addEventListener("touchstart", (e) => {
   touchStartX = e.changedTouches[0].screenY;
