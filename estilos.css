@@ -212,7 +212,7 @@ section.visible {
   justify-content: center;
   align-items: center;
   padding: 0.6rem 0rem 0.05rem 0rem;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Zain", sans-serif;
   margin: 0 auto 20px;
   margin-top: 1vh;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06) inset;
@@ -223,7 +223,8 @@ section.visible {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 .weekday {
@@ -251,6 +252,7 @@ section.visible {
   font-weight: 500;
   color: var(--accent);
   text-transform: uppercase;
+  margin-top: -12px;
 }
 
 .year-time {
@@ -860,4 +862,46 @@ section.visible {
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+/*ANIMACIONES*/
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+/* Cuando entra en pantalla */
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Diferentes tipos de animación ---- */
+.fade-in.visible {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up.visible {
+  animation: slideUp 1s ease forwards;
+}
+
+.zoom-in.visible {
+  animation: zoomIn 1s ease forwards;
+}
+
+/* ---- Keyframes ---- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
