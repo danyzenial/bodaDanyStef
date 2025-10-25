@@ -271,7 +271,7 @@ section.visible {
 }
 
 /* Cards */
-.card {
+.card-1 {
 
   padding: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
@@ -781,15 +781,17 @@ section.visible {
   text-align: center;
 }
 
-.rsvp-footer .rsvp-footer-info-2{
+.rsvp-footer-info-2{
   margin-top: 25px;
   font-weight: 500;
-  font-family: "Zain", sans-serif;
+  font-family: "Zain", sans-serif!important;
   color: var(--colorPrincipal);
   font-size: 1.rem;
   text-align: center;
   background-color: #edebe7;
   border-radius: 25px;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 10px 10px 10px;
   line-height: 20px;
+  width: 90%;
+  margin: auto;
 }
