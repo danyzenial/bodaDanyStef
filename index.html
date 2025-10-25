@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
     <link href="estilos.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
 </head>
 
 <body>
@@ -71,7 +72,7 @@
         </div>
 
         <!-- countdown Card -->
-        <div class="card countdown" aria-labelledby="countdown-title">
+        <div class="card-1 countdown" aria-labelledby="countdown-title">
             <h4 id="countdown-title">Cuenta regresiva para el gran día</h4>
             <div class="time-row" role="timer" aria-live="polite">
                 <div class="time-block">
@@ -94,7 +95,7 @@
         </div>
 
         <!-- Location Card -->
-        <div class="card location" aria-labelledby="location-title">
+        <div class="card-1 location" aria-labelledby="location-title">
             <img src="images/pareja1.jpeg" alt="Foto" class="location-notificacion">
             <h4 id="location-title" style="margin:0 0 8px 0;font-size:20px;color:#23564e">Lugar</h4>
             <div class="location-card">
@@ -226,15 +227,76 @@
                     <div class="rsvp-footer">
                         <div class="rsvp-footer-info-1">Dar clic sobre cualquiera de los novios para abrir WhatsApp y
                             confirmar tu asistencia.</div>
-                        <div class="rsvp-footer-info-2">Tienen hasta el 01 de Noviembre para confirmar</div>
                     </div>
+
                 </div>
+            </div>
+            <div class="rsvp-footer-info-2">Tienen hasta el 01 de Noviembre para confirmar.</div>
+        </div>
+
+        <div class="main-container">
+            <div class="carousel-section">
+                <div class="carousel-container">
+                    <button class="nav-arrow up">
+                        <i class="fas fa-arrow-circle-up"></i>
+                    </button>
+                    <div class="carousel-track">
+                        <div class="card" data-index="0">
+                            <img src="images/pareja1.jpeg" alt="Team Member 1">
+                        </div>
+                        <div class="card" data-index="1">
+                            <img src="images/pareja1.jpeg" alt="Team Member 2">
+                        </div>
+                        <div class="card" data-index="2">
+                            <img src="images/pareja1.jpeg" alt="Team Member 3">
+                        </div>
+                        <div class="card" data-index="3">
+                            <img src="images/pareja1.jpeg" alt="Team Member 4">
+                        </div>
+                        <div class="card" data-index="4">
+                            <img src="images/pareja1.jpeg" alt="Team Member 5">
+                        </div>
+                        <div class="card" data-index="5">
+                            <img src="images/pareja1.jpeg" alt="Team Member 6">
+                        </div>
+                    </div>
+                    <button class="nav-arrow down">
+                        <i class="fas fa-arrow-circle-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div class="nav-controls">
+                    <button class="nav-arrow up">
+                        <img src="https://ik.imagekit.io/gopichakradhar/icons/top.png?updatedAt=1754290522765" alt="Up">
+                    </button>
+                    <button class="nav-arrow down">
+                        <img src="https://ik.imagekit.io/gopichakradhar/icons/down.png?updatedAt=1754290523249"
+                            alt="Down">
+                    </button>
+                </div>
+
+                <!--<div class="member-info">
+                    <h2 class="member-name">Emily Kim</h2>
+                    <p class="member-role">Founder</p>
+                </div>
+
+                <div class="dots">
+                    <div class="dot active" data-index="0"></div>
+                    <div class="dot" data-index="1"></div>
+                    <div class="dot" data-index="2"></div>
+                    <div class="dot" data-index="3"></div>
+                    <div class="dot" data-index="4"></div>
+                    <div class="dot" data-index="5"></div>
+                </div>-->
             </div>
         </div>
 
+
     </div>
 
-
+    <script src="scripts.js"></script>
     <script>
         // === Cuenta regresiva ===
         // Ajusta la fecha destino aquí:
