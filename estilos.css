@@ -77,7 +77,7 @@ section.visible {
   position: relative;
   margin-top: -12vh;
   /* se mete un poquito debajo */
-  border-radius: 400px 400px 80px 80px;
+  border-radius: 400px 400px 0px 00px;
   color: white;
   overflow: hidden;
   z-index: 1;
@@ -189,16 +189,16 @@ section.visible {
 .infoCard .title-card {
   text-align: left;
   display: block;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-family: "Zain", sans-serif;
-  color: #ffffff;
-  background-color: var(--colorPrincipal);
-  border-radius: 1vh;
+  color:var(--colorPrincipal);
+  background-color: white;
+  border-radius: 0px;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 1vh;
+  padding: 1px;
 }
 
 .infoCard .title-card span {
@@ -211,10 +211,12 @@ section.visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0rem 0rem 0rem;
+  padding: 0.6rem 0rem 0.05rem 0rem;
   font-family: "Roboto Condensed", sans-serif;
   margin: 0 auto 20px;
   margin-top: 1vh;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 25px;
 }
 
 .date-info {
@@ -454,7 +456,7 @@ section.visible {
 /* CARD DRESS*/
 
 .cardress {
-  margin-top: 90px!important;
+  margin-top: 90px !important;
   padding: 16px 0px 0px 0px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
   overflow: hidden;
@@ -525,6 +527,7 @@ section.visible {
 #Capa_1 {
   margin-right: -15px;
 }
+
 /*GIFT CARD*/
 .giftcard {
   padding: 16px 0px 0px 0px;
@@ -607,12 +610,12 @@ section.visible {
   border-radius: 25px;
 }
 
-.gift-description i{
+.gift-description i {
   margin-right: 5px;
   font-size: 1.3rem;
 }
 
-.gift-description .gift-1 div{
+.gift-description .gift-1 div {
   text-align: center;
   font-family: "Zain", sans-serif;
   font-weight: lighter;
@@ -627,17 +630,17 @@ section.visible {
 }
 
 
-.gift-description .gift-2{
+.gift-description .gift-2 {
   margin-top: 15px;
 }
 
 #course_divider hr {
-    background-color: var(--colorPrincipal);
-    border: 1px solid var(--colorPrincipal);
-    border-radius: 100px;
-    height: 2px;
-    width: 90%;
-    margin: auto;
+  background-color: var(--colorPrincipal);
+  border: 1px solid var(--colorPrincipal);
+  border-radius: 100px;
+  height: 2px;
+  width: 90%;
+  margin: auto;
 }
 
 /*RSVP CARD*/
@@ -694,7 +697,7 @@ section.visible {
   border-radius: 25px;
 }
 
-.rsvp-description .rsvp-1 i{
+.rsvp-description .rsvp-1 i {
   margin-right: 5px;
   font-size: 1.8rem;
   border-radius: 50%;
@@ -706,7 +709,7 @@ section.visible {
   z-index: 2;
 }
 
-.rsvp-description .rsvp-1{
+.rsvp-description .rsvp-1 {
   text-align: center;
   font-weight: lighter;
   width: 90%;
@@ -718,7 +721,7 @@ section.visible {
   padding: 2px;
 }
 
-.rsvp-description .rsvp-1 span{
+.rsvp-description .rsvp-1 span {
   font-family: "Great Vibes", cursive;
   background-color: #00ACC1;
   color: white;
@@ -731,7 +734,7 @@ section.visible {
   text-align: center;
 }
 
-.rsvp-description .rsvp-2{
+.rsvp-description .rsvp-2 {
   text-align: center;
   font-weight: lighter;
   width: 90%;
@@ -743,7 +746,7 @@ section.visible {
   padding: 2px;
 }
 
-.rsvp-description .rsvp-2 i{
+.rsvp-description .rsvp-2 i {
   margin-right: 5px;
   font-size: 1.8rem;
   border-radius: 50%;
@@ -755,7 +758,7 @@ section.visible {
   z-index: 2;
 }
 
-.rsvp-description .rsvp-2 span{
+.rsvp-description .rsvp-2 span {
   font-family: "Great Vibes", cursive;
   background-color: #e29d96;
   color: white;
@@ -769,11 +772,11 @@ section.visible {
   font-size: 1.5rem;
 }
 
-.rsvp-footer{
+.rsvp-footer {
   margin-top: 28px;
 }
 
-.rsvp-footer .rsvp-footer-info-1{
+.rsvp-footer .rsvp-footer-info-1 {
   font-weight: 400;
   font-family: "Zain", sans-serif;
   color: #262626;
@@ -781,10 +784,10 @@ section.visible {
   text-align: center;
 }
 
-.rsvp-footer-info-2{
+.rsvp-footer-info-2 {
   margin-top: 25px;
   font-weight: 500;
-  font-family: "Zain", sans-serif!important;
+  font-family: "Zain", sans-serif !important;
   color: var(--colorPrincipal);
   font-size: 1.rem;
   text-align: center;
@@ -794,4 +797,67 @@ section.visible {
   line-height: 20px;
   width: 90%;
   margin: auto;
+}
+
+/*TITULO DE LAS FOTOS*/
+.titlePhotos {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.titlePhotos .titulo1 {
+  font-family: "Zain", sans-serif;
+  font-size: 1.2rem;
+}
+
+.titlePhotos .titulo2 {
+  font-family: "Great Vibes", cursive;
+  line-height: 45px;
+  font-size: 3rem;
+}
+
+#course_dividerPhotos hr {
+  background-color: yellow;
+  border: 1px solid rgb(190, 190, 126);
+  border-radius: 100px;
+  height: 2px;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.subtituloFotos {
+  margin-top: -120px;
+  position: relative;
+  font-family: "Zain", sans-serif;
+  margin-bottom: 70px;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: justify;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #97bbafa5;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  width: 85%;
+  line-height: 20px;
+}
+
+.subtituloFotos span {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.5rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.subtituloFotos i {
+  position: absolute;
+  bottom: -15px; 
+  right: 10px; 
+  padding: 10px;
+  color: rgb(227, 140, 140);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
 }
