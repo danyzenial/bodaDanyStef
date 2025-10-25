@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
@@ -36,7 +36,7 @@
 
     <div class="s2">
         <!-- mensaje -->
-        <div>
+        <div class="animar fade-in">
             <h4>
                 nos
             </h4>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- date Card -->
-        <div class="cardDate">
+        <div class="cardDate animar fade-in">
             <div class="imgCard">
                 <img src="images/pareja1.jpeg" alt="">
             </div>
@@ -72,7 +72,7 @@
         </div>
 
         <!-- countdown Card -->
-        <div class="card-1 countdown" aria-labelledby="countdown-title">
+        <div class="card-1 countdown animar fade-in" aria-labelledby="countdown-title">
             <h4 id="countdown-title">Cuenta regresiva para el gran día</h4>
             <div class="time-row" role="timer" aria-live="polite">
                 <div class="time-block">
@@ -95,7 +95,7 @@
         </div>
 
         <!-- Location Card -->
-        <div class="card-1 location" aria-labelledby="location-title">
+        <div class="card-1 location animar zoom-in" aria-labelledby="location-title">
             <img src="images/pareja1.jpeg" alt="Foto" class="location-notificacion">
             <h4 id="location-title" style="margin:0 0 8px 0;font-size:20px;color:#23564e">Lugar</h4>
             <div class="location-card">
@@ -123,7 +123,7 @@
         </div>
 
         <!-- Dress Card -->
-        <div class="cardress dress" aria-labelledby="dress-title">
+        <div class="cardress dress animar fade-in" aria-labelledby="dress-title">
             <div class="dress-fila">
                 <h4 id="dress" class="dress-h4">Vestimenta</h4>
                 <div class="dress-icon">
@@ -183,7 +183,7 @@
         </div>
 
         <!-- gift Card -->
-        <div class="giftcard gift" aria-labelledby="gift-title">
+        <div class="giftcard gift animar zoom-in" aria-labelledby="gift-title">
             <div class="gift-notificacion">
                 <i class="fas fa-gifts"></i>
             </div>
@@ -209,7 +209,7 @@
         </div>
 
         <!-- rsvp Card -->
-        <div class="rsvpcard rsvp" aria-labelledby="rsvp-title">
+        <div class="rsvpcard rsvp animar fade-in" aria-labelledby="rsvp-title">
             <h4 id="rsvp" class="rsvp-h4">Queremos celebrar contigo</h4>
             <div class="rsvp-card">
                 <div class="rsvp-info">
@@ -234,7 +234,7 @@
             <div class="rsvp-footer-info-2">Tienen hasta el 01 de Noviembre para confirmar.</div>
         </div>
 
-        <div class="main-container">
+        <div class="main-container animar zoom-in">
             <div class="titlePhotos">
                 <div class="titulo1">nuestra historia</div>
                 <div class="titulo2">En Fotos</div>
@@ -350,6 +350,21 @@
         }
 
         // Accessibility: if JS desactiva, deja valores por defecto
+    </script>
+    <script>
+        // Selecciona todos los elementos que tengan la clase "animar"
+        const elementos = document.querySelectorAll('.animar');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // deja de observar después de animar (opcional)
+                }
+            });
+        }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
+
+        elementos.forEach(el => observer.observe(el));
     </script>
 </body>
 
