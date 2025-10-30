@@ -30,8 +30,14 @@
 </head>
 
 <body>
+
+    <div id="loader">
+        <div class="heart"></div>
+        <div class="loading-text">Cargando la magia de nuestro día...</div>
+    </div>
+
     <section class="s1">
-        <div class="blur-negro"></div>
+        <img src="images/Logo Blanco.png" alt="Logo" class="logo animar zoom-in">
     </section>
 
     <div class="s2">
@@ -365,6 +371,20 @@
         }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
 
         elementos.forEach(el => observer.observe(el));
+    </script>
+    <script>
+        // Espera a que el DOM cargue
+        document.addEventListener("DOMContentLoaded", function () {
+            // Espera 2 segundos adicionales
+            setTimeout(function () {
+                const loader = document.getElementById("loader");
+                loader.style.opacity = "0"; // efecto de desvanecimiento
+                setTimeout(() => {
+                    loader.style.display = "none"; // oculta el loader
+                    document.getElementById("content").style.display = "block"; // muestra el contenido
+                }, 500); // coincide con la transición CSS
+            }, 3000); // tiempo extra de espera
+        });
     </script>
 </body>
 
