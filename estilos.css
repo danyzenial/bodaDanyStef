@@ -435,7 +435,7 @@ section.visible {
 
 .location-hours .location-description {
   font-family: "Zain", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-left: 5px;
 }
 
@@ -489,7 +489,7 @@ section.visible {
   font-weight: lighter;
   font-family: "Zain", sans-serif;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: -20px 30px 5px 30px;
   line-height: 1.8rem;
@@ -523,7 +523,7 @@ section.visible {
   font-weight: 500;
   width: 100% !important;
   line-height: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 #Capa_1 {
@@ -627,7 +627,7 @@ section.visible {
   color: white;
   border-radius: 25px;
   margin-bottom: 15px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 3px;
 }
 
@@ -666,10 +666,11 @@ section.visible {
 .rsvp h4 {
   color: var(--colorPrincipal) !important;
   font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-size: 1.8rem !important;
+  font-weight: 600;
+  font-size: 2rem !important;
   text-align: center;
   margin-top: 5px !important;
+  margin-bottom: 20px!important;
 }
 
 .rsvp-info {
@@ -682,7 +683,7 @@ section.visible {
   font-weight: 400;
   font-family: "Zain", sans-serif;
   color: #262626;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -690,7 +691,7 @@ section.visible {
   font-weight: 600;
   font-family: "Great Vibes", cursive;
   color: var(--colorPrincipal);
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   background-color: white;
   width: 80%;
@@ -791,7 +792,7 @@ section.visible {
   font-weight: 500;
   font-family: "Zain", sans-serif !important;
   color: var(--colorPrincipal);
-  font-size: 1.rem;
+  font-size: 0.8rem;
   text-align: center;
   background-color: #edebe7;
   border-radius: 25px;
@@ -905,3 +906,5 @@ section.visible {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/*EFECTOS*/
