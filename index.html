@@ -36,13 +36,20 @@
         <div class="loading-text">Cargando la magia de nuestro día...</div>
     </div>
 
+    <div class="audio-control">
+        <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+        <audio id="myAudio" src="files/soundtrack.mp3"></audio>
+    </div>
+
+    <canvas id="fondo"></canvas>
+
     <section class="s1">
         <img src="images/Logo Blanco.png" alt="Logo" class="logo animar zoom-in">
     </section>
 
     <div class="s2">
         <!-- mensaje -->
-        <div class="animar fade-in">
+        <div class="animar fade-in parallax">
             <h4>
                 nos
             </h4>
@@ -69,7 +76,6 @@
                             <span class="month">Diciembre</span>
                         </div>
                         <div class="year-time">
-
                             <span class="time">04:00 PM</span>
                         </div>
                     </div>
@@ -303,89 +309,101 @@
                     <div class="dot" data-index="5"></div>
                 </div>-->
             </div>
-            <div class="subtituloFotos">
+            <!--<div class="subtituloFotos">
                 <i class="fas fa-heart"></i>
                 El <span>amor verdadero</span> no se busca, se construye día a día… como estas memorias.
-            </div>
+            </div>-->
         </div>
 
 
-    </div>
+        <script src="scripts.js"></script>
+        <script>
+            // === Cuenta regresiva ===
+            // Ajusta la fecha destino aquí:
+            // Formato: new Date(YYYY, MM-1, DD, HH, MIN, SEC)
+            // Actualmente: 6 Diciembre, 16:00 (ajusta zona horaria del cliente)
+            const targetDate = new Date(new Date().getFullYear(), 11, 6, 16, 0, 0);
 
-    <script src="scripts.js"></script>
-    <script>
-        // === Cuenta regresiva ===
-        // Ajusta la fecha destino aquí:
-        // Formato: new Date(YYYY, MM-1, DD, HH, MIN, SEC)
-        // Actualmente: 6 Diciembre, 16:00 (ajusta zona horaria del cliente)
-        const targetDate = new Date(new Date().getFullYear(), 11, 6, 16, 0, 0);
+            function pad(n, digits = 2) {
+                return n.toString().padStart(digits, '0');
+            }
 
-        function pad(n, digits = 2) {
-            return n.toString().padStart(digits, '0');
-        }
+            function updateCountdown() {
+                const now = new Date();
+                let diff = Math.max(0, targetDate - now);
 
-        function updateCountdown() {
-            const now = new Date();
-            let diff = Math.max(0, targetDate - now);
+                // calcular
+                const secondsTotal = Math.floor(diff / 1000);
+                const days = Math.floor(secondsTotal / (3600 * 24));
+                const hours = Math.floor((secondsTotal % (3600 * 24)) / 3600);
+                const minutes = Math.floor((secondsTotal % 3600) / 60);
+                const seconds = secondsTotal % 60;
 
-            // calcular
-            const secondsTotal = Math.floor(diff / 1000);
-            const days = Math.floor(secondsTotal / (3600 * 24));
-            const hours = Math.floor((secondsTotal % (3600 * 24)) / 3600);
-            const minutes = Math.floor((secondsTotal % 3600) / 60);
-            const seconds = secondsTotal % 60;
+                // Mostrar con formato similar al mockup
+                document.getElementById('days').textContent = pad(days, 2);
+                document.getElementById('hours').textContent = pad(hours, 2);
+                document.getElementById('minutes').textContent = pad(minutes, 2);
+                document.getElementById('seconds').textContent = pad(seconds, 2); // se muestra con 3 cifras para reproducir "400"
+            }
 
-            // Mostrar con formato similar al mockup
-            document.getElementById('days').textContent = pad(days, 2);
-            document.getElementById('hours').textContent = pad(hours, 2);
-            document.getElementById('minutes').textContent = pad(minutes, 2);
-            document.getElementById('seconds').textContent = pad(seconds, 2); // se muestra con 3 cifras para reproducir "400"
-        }
+            updateCountdown();
+            // Actualiza cada segundo
+            setInterval(updateCountdown, 1000);
 
-        updateCountdown();
-        // Actualiza cada segundo
-        setInterval(updateCountdown, 1000);
+            // === Map button: abre Google Maps con dirección (ajusta si hace falta) ===
+            function openMaps(e) {
+                e.preventDefault();
+                const address = encodeURIComponent('Jardines La Esperanza Calle Falsa 123');
+                // abre la app/Google Maps
+                const uri = `https://www.google.com/maps/search/?api=1&query=${address}`;
+                window.open(uri, '_blank');
+            }
 
-        // === Map button: abre Google Maps con dirección (ajusta si hace falta) ===
-        function openMaps(e) {
-            e.preventDefault();
-            const address = encodeURIComponent('Jardines La Esperanza Calle Falsa 123');
-            // abre la app/Google Maps
-            const uri = `https://www.google.com/maps/search/?api=1&query=${address}`;
-            window.open(uri, '_blank');
-        }
+            // Accessibility: if JS desactiva, deja valores por defecto
+        </script>
+        <script>
+            // Selecciona todos los elementos que tengan la clase "animar"
+            const elementos = document.querySelectorAll('.animar');
 
-        // Accessibility: if JS desactiva, deja valores por defecto
-    </script>
-    <script>
-        // Selecciona todos los elementos que tengan la clase "animar"
-        const elementos = document.querySelectorAll('.animar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // deja de observar después de animar (opcional)
+                    }
+                });
+            }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // deja de observar después de animar (opcional)
+            elementos.forEach(el => observer.observe(el));
+        </script>
+        <script>
+            // Espera a que el DOM cargue
+            document.addEventListener("DOMContentLoaded", function () {
+                // Espera 2 segundos adicionales
+                setTimeout(function () {
+                    const loader = document.getElementById("loader");
+                    loader.style.opacity = "0"; // efecto de desvanecimiento
+                    setTimeout(() => {
+                        loader.style.display = "none"; // oculta el loader
+                        document.getElementById("content").style.display = "block"; // muestra el contenido
+                    }, 500); // coincide con la transición CSS
+                }, 3000); // tiempo extra de espera
+            });
+        </script>
+        <script>
+            const audio = document.getElementById("myAudio");
+            const btn = document.getElementById("playPauseBtn");
+
+            btn.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                    btn.innerHTML = '<i class="fas fa-pause"></i>';  // cambia icono a pausa
+                } else {
+                    audio.pause();
+                    btn.innerHTML = '<i class="fas fa-play"></i>';  // cambia icono a play
                 }
             });
-        }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
-
-        elementos.forEach(el => observer.observe(el));
-    </script>
-    <script>
-        // Espera a que el DOM cargue
-        document.addEventListener("DOMContentLoaded", function () {
-            // Espera 2 segundos adicionales
-            setTimeout(function () {
-                const loader = document.getElementById("loader");
-                loader.style.opacity = "0"; // efecto de desvanecimiento
-                setTimeout(() => {
-                    loader.style.display = "none"; // oculta el loader
-                    document.getElementById("content").style.display = "block"; // muestra el contenido
-                }, 500); // coincide con la transición CSS
-            }, 3000); // tiempo extra de espera
-        });
-    </script>
+        </script>
 </body>
 
 </html>
