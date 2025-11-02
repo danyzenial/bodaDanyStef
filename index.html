@@ -26,7 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
     <link href="estilos.css" rel="stylesheet">
-    <link href="carousel.css" rel="stylesheet">
 </head>
 
 <body>
@@ -49,7 +48,7 @@
 
     <div class="s2">
         <!-- mensaje -->
-        <div class="animar fade-in parallax">
+        <div class="animar fade-in">
             <h4>
                 nos
             </h4>
@@ -58,11 +57,11 @@
         </div>
 
         <!-- date Card -->
-        <div class="cardDate animar fade-in">
-            <div class="imgCard">
+        <div class="cardDate">
+            <div class="imgCard  animar fade-in">
                 <img src="images/pareja1.jpeg" alt="">
             </div>
-            <div class="infoCard">
+            <div class="infoCard  animar fade-in">
 
                 <div class="title-card">
                     <span>¿Cuándo?</span>
@@ -246,7 +245,7 @@
             <div class="rsvp-footer-info-2">Tienen hasta el 01 de Noviembre para confirmar.</div>
         </div>
 
-        <div class="main-container animar fade-in">
+        <div class="main-carousel animar fade-in">
             <div class="titlePhotos">
                 <div class="titulo1">nuestra historia</div>
                 <div class="titulo2">En Fotos</div>
@@ -254,156 +253,161 @@
                     <hr>
                 </span>
             </div>
-            <div class="carousel-section">
-                <div class="carousel-container">
-                    <button class="nav-arrow up">
-                        <i class="fas fa-arrow-circle-up"></i>
-                    </button>
-                    <div class="carousel-track">
-                        <div class="card" data-index="0">
-                            <img src="images/pareja1.jpeg" alt="Team Member 1">
-                        </div>
-                        <div class="card" data-index="1">
-                            <img src="images/pareja1.jpeg" alt="Team Member 2">
-                        </div>
-                        <div class="card" data-index="2">
-                            <img src="images/pareja1.jpeg" alt="Team Member 3">
-                        </div>
-                        <div class="card" data-index="3">
-                            <img src="images/pareja1.jpeg" alt="Team Member 4">
-                        </div>
-                        <div class="card" data-index="4">
-                            <img src="images/pareja1.jpeg" alt="Team Member 5">
-                        </div>
-                        <div class="card" data-index="5">
-                            <img src="images/pareja1.jpeg" alt="Team Member 6">
-                        </div>
-                    </div>
-                    <button class="nav-arrow down">
-                        <i class="fas fa-arrow-circle-down"></i>
-                    </button>
+            <div class="carousel-wrapper">
+                <button id="prev" class="buttonCarousel">▲</button> <!-- botón arriba -->
+                <div class="carousel-3d-vertical">
+                    <div class="carousel-item active"><img src="images/pareja1.jpeg" alt="Imagen 1"></div>
+                    <div class="carousel-item"><img src="images/pareja1.jpeg" alt="Imagen 2"></div>
+                    <div class="carousel-item"><img src="images/pareja1.jpeg" alt="Imagen 3"></div>
+                    <div class="carousel-item"><img src="images/pareja1.jpeg" alt="Imagen 4"></div>
                 </div>
+                <button id="next" class="buttonCarousel">▼</button> <!-- botón abajo -->
             </div>
-
-            <div class="controls-section">
-                <div class="nav-controls">
-                    <button class="nav-arrow up">
-                        <i class="fas fa-arrow-circle-up"></i>
-                    </button>
-                    <button class="nav-arrow down">
-                        <i class="fas fa-arrow-circle-down"></i>
-                    </button>
-                </div>
-
-                <!--<div class="member-info">
-                    <h2 class="member-name">Emily Kim</h2>
-                    <p class="member-role">Founder</p>
-                </div>
-
-                <div class="dots">
-                    <div class="dot active" data-index="0"></div>
-                    <div class="dot" data-index="1"></div>
-                    <div class="dot" data-index="2"></div>
-                    <div class="dot" data-index="3"></div>
-                    <div class="dot" data-index="4"></div>
-                    <div class="dot" data-index="5"></div>
-                </div>-->
-            </div>
-            <!--<div class="subtituloFotos">
-                <i class="fas fa-heart"></i>
-                El <span>amor verdadero</span> no se busca, se construye día a día… como estas memorias.
-            </div>-->
         </div>
 
+    </div>
 
-        <script src="scripts.js"></script>
-        <script>
-            // === Cuenta regresiva ===
-            // Ajusta la fecha destino aquí:
-            // Formato: new Date(YYYY, MM-1, DD, HH, MIN, SEC)
-            // Actualmente: 6 Diciembre, 16:00 (ajusta zona horaria del cliente)
-            const targetDate = new Date(new Date().getFullYear(), 11, 6, 16, 0, 0);
+    </div>
 
-            function pad(n, digits = 2) {
-                return n.toString().padStart(digits, '0');
-            }
 
-            function updateCountdown() {
-                const now = new Date();
-                let diff = Math.max(0, targetDate - now);
+    <script src="scripts.js"></script>
+    <script>
+        // === Cuenta regresiva ===
+        // Ajusta la fecha destino aquí:
+        // Formato: new Date(YYYY, MM-1, DD, HH, MIN, SEC)
+        // Actualmente: 6 Diciembre, 16:00 (ajusta zona horaria del cliente)
+        const targetDate = new Date(new Date().getFullYear(), 11, 6, 16, 0, 0);
 
-                // calcular
-                const secondsTotal = Math.floor(diff / 1000);
-                const days = Math.floor(secondsTotal / (3600 * 24));
-                const hours = Math.floor((secondsTotal % (3600 * 24)) / 3600);
-                const minutes = Math.floor((secondsTotal % 3600) / 60);
-                const seconds = secondsTotal % 60;
+        function pad(n, digits = 2) {
+            return n.toString().padStart(digits, '0');
+        }
 
-                // Mostrar con formato similar al mockup
-                document.getElementById('days').textContent = pad(days, 2);
-                document.getElementById('hours').textContent = pad(hours, 2);
-                document.getElementById('minutes').textContent = pad(minutes, 2);
-                document.getElementById('seconds').textContent = pad(seconds, 2); // se muestra con 3 cifras para reproducir "400"
-            }
+        function updateCountdown() {
+            const now = new Date();
+            let diff = Math.max(0, targetDate - now);
 
-            updateCountdown();
-            // Actualiza cada segundo
-            setInterval(updateCountdown, 1000);
+            // calcular
+            const secondsTotal = Math.floor(diff / 1000);
+            const days = Math.floor(secondsTotal / (3600 * 24));
+            const hours = Math.floor((secondsTotal % (3600 * 24)) / 3600);
+            const minutes = Math.floor((secondsTotal % 3600) / 60);
+            const seconds = secondsTotal % 60;
 
-            // === Map button: abre Google Maps con dirección (ajusta si hace falta) ===
-            function openMaps(e) {
-                e.preventDefault();
-                const address = encodeURIComponent('Jardines La Esperanza Calle Falsa 123');
-                // abre la app/Google Maps
-                const uri = `https://www.google.com/maps/search/?api=1&query=${address}`;
-                window.open(uri, '_blank');
-            }
+            // Mostrar con formato similar al mockup
+            document.getElementById('days').textContent = pad(days, 2);
+            document.getElementById('hours').textContent = pad(hours, 2);
+            document.getElementById('minutes').textContent = pad(minutes, 2);
+            document.getElementById('seconds').textContent = pad(seconds, 2); // se muestra con 3 cifras para reproducir "400"
+        }
 
-            // Accessibility: if JS desactiva, deja valores por defecto
-        </script>
-        <script>
-            // Selecciona todos los elementos que tengan la clase "animar"
-            const elementos = document.querySelectorAll('.animar');
+        updateCountdown();
+        // Actualiza cada segundo
+        setInterval(updateCountdown, 1000);
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // deja de observar después de animar (opcional)
-                    }
-                });
-            }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
+        // === Map button: abre Google Maps con dirección (ajusta si hace falta) ===
+        function openMaps(e) {
+            e.preventDefault();
+            const address = encodeURIComponent('Jardines La Esperanza Calle Falsa 123');
+            // abre la app/Google Maps
+            const uri = `https://www.google.com/maps/search/?api=1&query=${address}`;
+            window.open(uri, '_blank');
+        }
 
-            elementos.forEach(el => observer.observe(el));
-        </script>
-        <script>
-            // Espera a que el DOM cargue
-            document.addEventListener("DOMContentLoaded", function () {
-                // Espera 2 segundos adicionales
-                setTimeout(function () {
-                    const loader = document.getElementById("loader");
-                    loader.style.opacity = "0"; // efecto de desvanecimiento
-                    setTimeout(() => {
-                        loader.style.display = "none"; // oculta el loader
-                        document.getElementById("content").style.display = "block"; // muestra el contenido
-                    }, 500); // coincide con la transición CSS
-                }, 3000); // tiempo extra de espera
-            });
-        </script>
-        <script>
-            const audio = document.getElementById("myAudio");
-            const btn = document.getElementById("playPauseBtn");
+        // Accessibility: if JS desactiva, deja valores por defecto
+    </script>
+    <script>
+        // Selecciona todos los elementos que tengan la clase "animar"
+        const elementos = document.querySelectorAll('.animar');
 
-            btn.addEventListener("click", () => {
-                if (audio.paused) {
-                    audio.play();
-                    btn.innerHTML = '<i class="fas fa-pause"></i>';  // cambia icono a pausa
-                } else {
-                    audio.pause();
-                    btn.innerHTML = '<i class="fas fa-play"></i>';  // cambia icono a play
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // deja de observar después de animar (opcional)
                 }
             });
-        </script>
+        }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
+
+        elementos.forEach(el => observer.observe(el));
+    </script>
+    <script>
+        // Espera a que el DOM cargue
+        document.addEventListener("DOMContentLoaded", function () {
+            // Espera 2 segundos adicionales
+            setTimeout(function () {
+                const loader = document.getElementById("loader");
+                loader.style.opacity = "0"; // efecto de desvanecimiento
+                setTimeout(() => {
+                    loader.style.display = "none"; // oculta el loader
+                    //document.getElementById("content").style.display = "block"; // muestra el contenido
+                }, 500); // coincide con la transición CSS
+            }, 0); // tiempo extra de espera
+        });
+    </script>
+    <script>
+        const audio = document.getElementById("myAudio");
+        const btn = document.getElementById("playPauseBtn");
+
+        btn.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = '<i class="fas fa-pause"></i>';  // cambia icono a pausa
+            } else {
+                audio.pause();
+                btn.innerHTML = '<i class="fas fa-play"></i>';  // cambia icono a play
+            }
+        });
+    </script>
+    <script>
+        const items = document.querySelectorAll('.carousel-item');
+        const nextBtn = document.getElementById('next');
+        const prevBtn = document.getElementById('prev');
+        let current = 0;
+
+        function updateCarousel() {
+            const total = items.length;
+            items.forEach(item => {
+                item.style.opacity = 0;
+                item.style.zIndex = 1;
+                item.style.filter = 'grayscale(100%)';
+            });
+
+            const prevIndex = (current - 1 + total) % total;
+            const nextIndex = (current + 1) % total;
+
+            // Imagen central (grande, color)
+            items[current].style.opacity = 1;
+            items[current].style.zIndex = 10;
+            items[current].style.filter = 'grayscale(0%)';
+            items[current].style.transform = 'translate(-50%, -50%) scale(1)';
+
+            // Imagen anterior (arriba, pequeña, parcialmente visible)
+            items[prevIndex].style.opacity = 0.6;
+            items[prevIndex].style.zIndex = 5;
+            items[prevIndex].style.transform = 'translate(-50%, -90%) scale(0.7)';
+
+            // Imagen siguiente (abajo, pequeña, parcialmente visible)
+            items[nextIndex].style.opacity = 0.6;
+            items[nextIndex].style.zIndex = 5;
+            items[nextIndex].style.transform = 'translate(-50%, -10%) scale(0.7)';
+        }
+
+        // Botones
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % items.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        // Inicializa
+        updateCarousel();
+
+
+    </script>
 </body>
 
 </html>
