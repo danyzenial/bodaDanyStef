@@ -21,39 +21,81 @@ body {
 }
 
 /* Decoraci[on section 1 */
-
 section {
-  min-height: 100vh;
+  height: 100dvh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px;
-  text-align: center;
-  opacity: 1;
-}
-
-section.visible {
-  opacity: 1;
-
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden; /* evita scroll */
 }
 
 .s1 {
   position: relative;
-  background-image: url(images/pareja1.jpeg);
-  border-radius: 0 0 400px 400px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  overflow: visible;
-  /* 🔑 evita que recorte lo de abajo */
+  border-radius: 400px;
+  width: 90%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1; /* mantiene proporción */
+  overflow: hidden;
   z-index: 2;
-  /* queda visualmente arriba */
 }
 
-.s1 img {
-  width: 100%;
-  height: 100%;
+/* pseudo-elemento para la imagen + degradado */
+.s1::before {
+  content: "";
+  position: absolute;
+  inset: 2%; /* 👈 deja un margen interno de 10% alrededor */
+  border-radius: inherit; /* respeta el radio de .s1 */
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0)),
+    url(images/pareja1.jpeg);
+  background-size: 100% 40%, cover;
+  background-position: top, center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.s1::after {
+  font-size: 0.8rem!important;
+  content: "♥ Desliza hacia abajo";
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  line-height: 1;           /* 👈 importante para alinear verticalmente */
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 20px;
+  animation: bounce 1.5s infinite;
+}
+
+/* logo encima */
+.s1 .logo {
+  position: absolute;
+  top: 8%;
+  transform: translateX(-50%);
+  z-index: 3;
+  max-width: 70%;
+}
+
+/* 📱 Responsivo móvil */
+@media (max-width: 600px) {
+  .s1 {
+    width: 90%;
+    aspect-ratio: 3 / 4;     /* más alto en pantallas verticales */
+    border-radius: 400px 400px 400px 400px;      /* bordes menos agresivos en móviles */
+    background-size: 100% 60%, cover; /* ajusta degradado */
+  }
+}
+
+/* Animación sencilla de rebote */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-5px); }
 }
 
 /*
@@ -69,15 +111,44 @@ section.visible {
     border-radius: 0px 0px 400px 400px; 
 }*/
 
+  canvas {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+/*SONIDO*/
+.audio-control {
+  position: fixed;          /* flota sobre todo */
+  bottom: 20px;             /* distancia desde la parte inferior */
+  right: 20px;              /* distancia desde la derecha */
+  z-index: 9999;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-control button {
+  font-size: 18px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* Decoraci[on section 2 */
-
-
-
 .s2 {
   position: relative;
   margin-top: -12vh;
   /* se mete un poquito debajo */
-  border-radius: 400px 400px 80px 80px;
+  border-radius: 400px 400px 0px 00px;
   color: white;
   overflow: hidden;
   z-index: 1;
@@ -88,7 +159,7 @@ section.visible {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--colorPrincipal);
+  background-color:  transparent;/*var(--colorPrincipal);*/
   border-radius: inherit;
   z-index: -1;
   /* el fondo sí está atrás */
@@ -142,9 +213,8 @@ section.visible {
   /* ancho del card */
   font-family: Arial, sans-serif;
   overflow: hidden;
+  margin-top: 3rem;
 }
-
-
 
 .imgCard {
   width: 70%;
@@ -171,7 +241,7 @@ section.visible {
 .infoCard {
   width: 80%;
   background-color: white;
-  padding: 1.5rem 2rem;
+  padding: 0.8rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
   border-radius: 40px 40px 40px 40px;
   left: 0;
@@ -182,23 +252,21 @@ section.visible {
   position: relative;
   z-index: 2;
   margin-bottom: 4rem;
-
 }
 
 
 .infoCard .title-card {
   text-align: left;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-family: "Zain", sans-serif;
-  color: #ffffff;
-  background-color: var(--colorPrincipal);
-  border-radius: 1vh;
+  color:var(--colorPrincipal);
+  border-radius: 0px;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
-  padding: 1vh;
+  padding: 1px;
 }
 
 .infoCard .title-card span {
@@ -211,17 +279,22 @@ section.visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0rem 0rem 0rem;
-  font-family: "Roboto Condensed", sans-serif;
+  padding: 0.6rem 0rem 0.6rem 0rem;
+  font-family: "Zain", sans-serif;
   margin: 0 auto 20px;
   margin-top: 1vh;
+  box-shadow:
+     0 6px 12px rgba(0, 0, 0, 0.05) inset,
+     0 -6px 12px rgba(0, 0, 0, 0.05) inset;
+  border-radius: 25px;
 }
 
 .date-info {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 .weekday {
@@ -249,6 +322,7 @@ section.visible {
   font-weight: 500;
   color: var(--accent);
   text-transform: uppercase;
+  margin-top: -12px;
 }
 
 .year-time {
@@ -263,7 +337,7 @@ section.visible {
 }
 
 .time {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   color: #333;
   margin-top: 2px;
@@ -271,7 +345,7 @@ section.visible {
 }
 
 /* Cards */
-.card {
+.card-1 {
 
   padding: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
@@ -431,7 +505,7 @@ section.visible {
 
 .location-hours .location-description {
   font-family: "Zain", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   margin-left: 5px;
 }
 
@@ -454,7 +528,7 @@ section.visible {
 /* CARD DRESS*/
 
 .cardress {
-  margin-top: 90px!important;
+  margin-top: 90px !important;
   padding: 16px 0px 0px 0px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
   overflow: hidden;
@@ -485,7 +559,7 @@ section.visible {
   font-weight: lighter;
   font-family: "Zain", sans-serif;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: -20px 30px 5px 30px;
   line-height: 1.8rem;
@@ -519,12 +593,13 @@ section.visible {
   font-weight: 500;
   width: 100% !important;
   line-height: 1.2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 #Capa_1 {
   margin-right: -15px;
 }
+
 /*GIFT CARD*/
 .giftcard {
   padding: 16px 0px 0px 0px;
@@ -607,12 +682,12 @@ section.visible {
   border-radius: 25px;
 }
 
-.gift-description i{
+.gift-description i {
   margin-right: 5px;
   font-size: 1.3rem;
 }
 
-.gift-description .gift-1 div{
+.gift-description .gift-1 div {
   text-align: center;
   font-family: "Zain", sans-serif;
   font-weight: lighter;
@@ -622,22 +697,22 @@ section.visible {
   color: white;
   border-radius: 25px;
   margin-bottom: 15px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 3px;
 }
 
 
-.gift-description .gift-2{
+.gift-description .gift-2 {
   margin-top: 15px;
 }
 
 #course_divider hr {
-    background-color: var(--colorPrincipal);
-    border: 1px solid var(--colorPrincipal);
-    border-radius: 100px;
-    height: 2px;
-    width: 90%;
-    margin: auto;
+  background-color: var(--colorPrincipal);
+  border: 1px solid var(--colorPrincipal);
+  border-radius: 100px;
+  height: 2px;
+  width: 90%;
+  margin: auto;
 }
 
 /*RSVP CARD*/
@@ -661,10 +736,11 @@ section.visible {
 .rsvp h4 {
   color: var(--colorPrincipal) !important;
   font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-size: 1.8rem !important;
+  font-weight: 600;
+  font-size: 2rem !important;
   text-align: center;
   margin-top: 5px !important;
+  margin-bottom: 20px!important;
 }
 
 .rsvp-info {
@@ -677,7 +753,7 @@ section.visible {
   font-weight: 400;
   font-family: "Zain", sans-serif;
   color: #262626;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -685,7 +761,7 @@ section.visible {
   font-weight: 600;
   font-family: "Great Vibes", cursive;
   color: var(--colorPrincipal);
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   background-color: white;
   width: 80%;
@@ -694,9 +770,9 @@ section.visible {
   border-radius: 25px;
 }
 
-.rsvp-description .rsvp-1 i{
+.rsvp-description .rsvp-1 i {
   margin-right: 5px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   border-radius: 50%;
   padding: 10px 12px 10px 12px;
   background-color: #00ACC1;
@@ -706,7 +782,32 @@ section.visible {
   z-index: 2;
 }
 
-.rsvp-description .rsvp-1{
+.rsvp-description .rsvp-1 {
+  text-align: center;
+  font-weight: lighter;
+  width: 90%;
+  margin: auto;
+  color: black;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  padding: 2px;
+}
+
+.rsvp-description .rsvp-1 span {
+  font-family: "Great Vibes", cursive;
+  background-color: #00ACC1;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-left: -40px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.rsvp-description .rsvp-2 {
   text-align: center;
   font-weight: lighter;
   width: 90%;
@@ -718,34 +819,9 @@ section.visible {
   padding: 2px;
 }
 
-.rsvp-description .rsvp-1 span{
-  font-family: "Great Vibes", cursive;
-  background-color: #00ACC1;
-  color: white;
-  padding-top: 8px;
-  padding-bottom: 2px;
-  padding-right: 40px;
-  padding-left: 35px;
-  margin-left: -25px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.rsvp-description .rsvp-2{
-  text-align: center;
-  font-weight: lighter;
-  width: 90%;
-  margin: auto;
-  color: black;
-  border-radius: 25px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  padding: 2px;
-}
-
-.rsvp-description .rsvp-2 i{
+.rsvp-description .rsvp-2 i {
   margin-right: 5px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   border-radius: 50%;
   padding: 10px 12px 10px 12px;
   background-color: #e29d96;
@@ -755,24 +831,25 @@ section.visible {
   z-index: 2;
 }
 
-.rsvp-description .rsvp-2 span{
+.rsvp-description .rsvp-2 span {
   font-family: "Great Vibes", cursive;
   background-color: #e29d96;
   color: white;
-  padding-top: 8px;
+  padding-top: px;
   padding-bottom: 2px;
   padding-right: 40px;
-  padding-left: 35px;
-  margin-left: -25px;
+  padding-left: 40px;
+  margin-left: -40px;
   border-radius: 25px;
   text-align: center;
+  font-size: 1.5rem;
 }
 
-.rsvp-footer{
+.rsvp-footer {
   margin-top: 28px;
 }
 
-.rsvp-footer .rsvp-footer-info-1{
+.rsvp-footer .rsvp-footer-info-1 {
   font-weight: 400;
   font-family: "Zain", sans-serif;
   color: #262626;
@@ -780,15 +857,195 @@ section.visible {
   text-align: center;
 }
 
-.rsvp-footer .rsvp-footer-info-2{
+.rsvp-footer-info-2 {
   margin-top: 25px;
   font-weight: 500;
-  font-family: "Zain", sans-serif;
+  font-family: "Zain", sans-serif !important;
   color: var(--colorPrincipal);
-  font-size: 14px;
+  font-size: 0.8rem;
   text-align: center;
   background-color: #edebe7;
   border-radius: 25px;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
+  line-height: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+/*TITULO DE LAS FOTOS*/
+.titlePhotos {
+  margin-top: 35px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.titlePhotos .titulo1 {
+  font-family: "Zain", sans-serif;
+  font-size: 1.2rem;
+}
+
+.titlePhotos .titulo2 {
+  font-family: "Great Vibes", cursive;
+  line-height: 45px;
+  font-size: 3rem;
+}
+
+#course_dividerPhotos hr {
+  background-color: yellow;
+  border: 1px solid rgb(190, 190, 126);
+  border-radius: 100px;
+  height: 2px;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.subtituloFotos {
+  margin-top: 10px;
+  position: relative;
+  font-family: "Zain", sans-serif;
+  margin-bottom: 70px;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: justify;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #97bbafa5;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  width: 85%;
   line-height: 20px;
 }
+
+.subtituloFotos span {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.5rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.subtituloFotos i {
+  position: absolute;
+  bottom: -15px; 
+  right: 10px; 
+  padding: 10px;
+  color: rgb(227, 140, 140);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+/*ANIMACIONES*/
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+/* Cuando entra en pantalla */
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Diferentes tipos de animación ---- */
+.fade-in.visible {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up.visible {
+  animation: slideUp 1s ease forwards;
+}
+
+.zoom-in.visible {
+  animation: zoomIn 1s ease forwards;
+}
+
+/* ---- Keyframes ---- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/*EFECTOS*/
+ #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+  }
+
+  /* Corazón animado */
+  .heart {
+    width: 60px;
+    height: 60px;
+    background-color: #e91e63;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite;
+    margin-bottom: 20px;
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: #e91e63;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .heart::before {
+    top: -30px;
+    left: 0;
+  }
+  .heart::after {
+    left: 30px;
+    top: 0;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.2) rotate(-45deg); }
+  }
+
+  /* Texto de carga */
+  .loading-text {
+    font-size: 1.5rem;
+    color: #c2185b;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+     font-family: "Great Vibes", cursive;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+
+
+
+
+
+  
