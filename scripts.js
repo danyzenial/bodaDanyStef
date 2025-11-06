@@ -6,7 +6,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particlesArray = [];
-const colors = ["#ffffffff", "#b1b1b1ff", "#ffffffff"]; // colores de partículas minimalistas
+const colors = ["#0a7b21ff", "#55be60ff", "#0a7b21ff"]; // colores de partículas minimalistas
 
 // Función para redimensionar canvas y reinicializar partículas
 function resizeCanvas() {
