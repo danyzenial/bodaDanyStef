@@ -1152,5 +1152,26 @@ section {
 }
 
 
+/*FIRMA*/
 
+.firma {
+  width: 100%;
+  border-radius: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.firma img{
+  background-size: cover;
+  width: 50%;
+  filter: invert(100%);  
+   filter: brightness(0) saturate(100%) invert(10%) sepia(93%) saturate(656%) hue-rotate(97deg) brightness(92%) contrast(92%);
+}
+
+.firma div{
+  margin-top: -50px;
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #183e0c;
+}
