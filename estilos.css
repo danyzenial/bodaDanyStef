@@ -3,7 +3,8 @@
   --accent: #f59e0b;
   --muted: #8d8d8d;
   --realse: white;
-  --colorPrincipal: #138D75;
+  --colorPrincipal: 	#EDEEE7;
+  --colorTexto: #687d5c;
 }
 
 * {
@@ -49,7 +50,7 @@ section {
   border-radius: inherit; /* respeta el radio de .s1 */
   background-image:
     linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0)),
-    url(images/pareja1.jpeg);
+    url(images/pareja1.jpg);
   background-size: 100% 40%, cover;
   background-position: top, center;
   background-repeat: no-repeat;
@@ -149,7 +150,7 @@ section {
   margin-top: -12vh;
   /* se mete un poquito debajo */
   border-radius: 400px 400px 0px 00px;
-  color: white;
+  color: var(--colorTexto);
   overflow: hidden;
   z-index: 1;
   /* está debajo visualmente, pero aún clicable */
@@ -260,7 +261,7 @@ section {
   display: block;
   font-size: 1.8rem;
   font-family: "Zain", sans-serif;
-  color:var(--colorPrincipal);
+  color:var(--colorTexto);
   border-radius: 0px;
   text-align: center;
   align-items: center;
@@ -369,7 +370,7 @@ section {
   font-family: "Great Vibes", cursive;
   margin: 0 0 8px 0;
   font-size: 1.6rem;
-  color: #1f5e57;
+  color: var(--colorTexto);
 }
 
 .time-row {
@@ -396,7 +397,7 @@ section {
 .time-number {
   font-size: 20px;
   font-weight: 700;
-  color: #145045;
+  color: var(--colorTexto);
 }
 
 .time-label {
@@ -412,13 +413,13 @@ section {
 .location {
   border-radius: 40px;
   margin-bottom: 40px;
-  background-color: #EFE9DD;
+  background-color: #7a9a65cd;
   position: relative;
   overflow: visible;
 }
 
 .location h4 {
-  color: var(--colorPrincipal) !important;
+  color: white !important;
   font-family: "Great Vibes", cursive;
   font-weight: 600;
   font-size: 2rem !important;
@@ -466,16 +467,16 @@ section {
 .loc-info div {
   font-weight: 400;
   font-family: "Zain", sans-serif;
-  color: #262626;
+  color: #ffffff;
   font-size: 1.5rem;
   text-align: center;
 }
 
 .btn {
   display: inline-block;
-  background: var(--colorPrincipal);
+  background: #687d5c;
   font-family: "Zain", sans-serif;
-  color: #fff;
+  color: white;
   padding: 10px 14px;
   border-radius: 28px;
   text-decoration: none;
@@ -488,7 +489,7 @@ section {
 
 .location-hours {
   background-color: white;
-  color: var(--colorPrincipal);
+  color: #687d5c;
   padding: 15px;
   border-radius: 20px;
   width: 95%;
@@ -540,13 +541,13 @@ section {
 .dress {
   border-radius: 50px;
   margin-bottom: 100px;
-  background-color: #97bbaf;
+  background-color: #ffffff;
   position: relative;
   overflow: visible;
 }
 
 .dress h4 {
-  color: rgb(255, 255, 255) !important;
+  color: #687d5c !important;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-size: 2.4rem !important;
@@ -558,8 +559,8 @@ section {
 .dress-info div {
   font-weight: lighter;
   font-family: "Zain", sans-serif;
-  color: #ffffff;
-  font-size: 1.1rem;
+  color: #687d5c;
+  font-size: 1.0rem;
   text-align: center;
   margin: -20px 30px 5px 30px;
   line-height: 1.8rem;
@@ -573,7 +574,7 @@ section {
 }
 
 .dress-fila .dress-icon {
-  background-color: white;
+  background-color: #7a9a65cd;
   color: var(--colorPrincipal);
   padding: 32px 18px 32px 18px;
   border-radius: 100%;
@@ -584,8 +585,8 @@ section {
 }
 
 .dress-footer {
-  background-color: white;
-  border-radius: 0px 0px 55px 55px;
+  background-color: #687d5c;
+  border-radius: 0px 0px 50px 50px;
   color: var(--colorPrincipal);
   font-family: "Zain", sans-serif;
   padding: 15px 35px 15px 35px;
@@ -612,14 +613,14 @@ section {
 .gift {
   border-radius: 50px;
   margin-bottom: 50px;
-  background-color: #EFE9DD;
+  background-color: #7a9a65cd;
   position: relative;
   overflow: visible;
   padding-bottom: 25px;
 }
 
 .gift h3 {
-  color: var(--colorPrincipal) !important;
+  color:white !important;
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-size: 1.5rem !important;
@@ -629,7 +630,7 @@ section {
 }
 
 .gift h4 {
-  color: var(--colorPrincipal) !important;
+  color: white !important;
   font-family: "Zain", sans-serif;
   font-weight: 600;
   font-size: 2.8rem !important;
@@ -644,7 +645,7 @@ section {
   text-align: center;
   margin-top: -60px;
   font-size: 3rem;
-  color: var(--colorPrincipal);
+  color: var(--colorTexto);
 }
 
 .gift-notificacion i {
@@ -664,7 +665,7 @@ section {
 .gift-info div {
   font-weight: 400;
   font-family: "Zain", sans-serif;
-  color: #262626;
+  color: white;
   font-size: 1.2rem;
   text-align: center;
 }
@@ -672,7 +673,7 @@ section {
 .gift-description {
   font-weight: 600;
   font-family: "Great Vibes", cursive;
-  color: var(--colorPrincipal);
+  color: var(--colorTexto);
   font-size: 1.2rem;
   text-align: center;
   background-color: white;
@@ -691,7 +692,7 @@ section {
   text-align: center;
   font-family: "Zain", sans-serif;
   font-weight: lighter;
-  background-color: var(--colorPrincipal);
+  background-color: var(--colorTexto);
   width: 90%;
   margin: auto;
   color: white;
@@ -707,8 +708,8 @@ section {
 }
 
 #course_divider hr {
-  background-color: var(--colorPrincipal);
-  border: 1px solid var(--colorPrincipal);
+  background-color: var(--colorTexto);
+  border: 1px solid var(--colorTexto);
   border-radius: 100px;
   height: 2px;
   width: 90%;
@@ -734,7 +735,7 @@ section {
 }
 
 .rsvp h4 {
-  color: var(--colorPrincipal) !important;
+  color: var(--colorTexto) !important;
   font-family: "Great Vibes", cursive;
   font-weight: 600;
   font-size: 2rem !important;
@@ -752,7 +753,7 @@ section {
 .rsvp-info div {
   font-weight: 400;
   font-family: "Zain", sans-serif;
-  color: #262626;
+  color: var(--colorTexto);
   font-size: 1.1rem;
   text-align: center;
 }
@@ -760,7 +761,7 @@ section {
 .rsvp-description {
   font-weight: 600;
   font-family: "Great Vibes", cursive;
-  color: var(--colorPrincipal);
+  color: var(--colorTexto);
   font-size: 1rem;
   text-align: center;
   background-color: white;
@@ -775,7 +776,7 @@ section {
   font-size: 1.8rem;
   border-radius: 50%;
   padding: 10px 12px 10px 12px;
-  background-color: #00ACC1;
+  background-color: #4e673e;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
   color: white;
   position: relative;
@@ -787,7 +788,7 @@ section {
   font-weight: lighter;
   width: 90%;
   margin: auto;
-  color: black;
+  color: var(--colorTexto);
   border-radius: 25px;
   margin-bottom: 15px;
   font-size: 1.5rem;
@@ -796,7 +797,7 @@ section {
 
 .rsvp-description .rsvp-1 span {
   font-family: "Great Vibes", cursive;
-  background-color: #00ACC1;
+  background-color: #4e673e;
   color: white;
   padding-top: 8px;
   padding-bottom: 2px;
@@ -812,7 +813,7 @@ section {
   font-weight: lighter;
   width: 90%;
   margin: auto;
-  color: black;
+  color: var(--colorTexto);
   border-radius: 25px;
   margin-bottom: 15px;
   font-size: 1rem;
@@ -824,7 +825,7 @@ section {
   font-size: 1.8rem;
   border-radius: 50%;
   padding: 10px 12px 10px 12px;
-  background-color: #e29d96;
+  background-color: #7a946a;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
   color: white;
   position: relative;
@@ -833,7 +834,7 @@ section {
 
 .rsvp-description .rsvp-2 span {
   font-family: "Great Vibes", cursive;
-  background-color: #e29d96;
+  background-color: #7a946a;
   color: white;
   padding-top: 8px;
   padding-bottom: 2px;
@@ -852,7 +853,7 @@ section {
 .rsvp-footer .rsvp-footer-info-1 {
   font-weight: 400;
   font-family: "Zain", sans-serif;
-  color: #262626;
+  color: var(--colorTexto);
   font-size: 1rem;
   text-align: center;
 }
@@ -861,7 +862,7 @@ section {
   margin-top: 25px;
   font-weight: 500;
   font-family: "Zain", sans-serif !important;
-  color: var(--colorPrincipal);
+  color: var(--colorTexto);
   font-size: 0.8rem;
   text-align: center;
   background-color: #edebe7;
@@ -877,6 +878,7 @@ section {
   margin-top: 35px;
   text-align: center;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .titlePhotos .titulo1 {
@@ -891,8 +893,8 @@ section {
 }
 
 #course_dividerPhotos hr {
-  background-color: yellow;
-  border: 1px solid rgb(190, 190, 126);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 100px;
   height: 2px;
   width: 100%;
@@ -910,7 +912,7 @@ section {
   text-align: justify;
   margin-left: 50px;
   margin-right: 50px;
-  background-color: #97bbafa5;
+  background-color: #ffffff;
   color: white;
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
@@ -998,7 +1000,7 @@ section {
   .heart {
     width: 60px;
     height: 60px;
-    background-color: #e91e63;
+    background-color: var(--colorTexto);
     position: relative;
     transform: rotate(-45deg);
     animation: beat 1s infinite;
@@ -1009,7 +1011,7 @@ section {
     content: "";
     width: 60px;
     height: 60px;
-    background-color: #e91e63;
+    background-color: var(--colorTexto);
     border-radius: 50%;
     position: absolute;
   }
@@ -1030,7 +1032,7 @@ section {
   /* Texto de carga */
   .loading-text {
     font-size: 1.5rem;
-    color: #c2185b;
+    color: var(--colorTexto);
     letter-spacing: 2px;
     animation: pulse 1.5s infinite;
      font-family: "Great Vibes", cursive;
@@ -1049,7 +1051,7 @@ section {
 /*Nuevo CAROUSEL*/
 .main-carousel {
   position: relative; /* Necesario para posicionar los pseudo-elementos */
-  background-color: #116c5ad1;
+  background-color:#0b2104;
   display: flex;
   width: 95%;
   max-width: 1200px;
@@ -1064,34 +1066,8 @@ section {
 }
 
 /* Efecto de borde animado */
-.main-carousel::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 2.5px; /* grosor del borde */
-  border-radius: inherit;
-  background: linear-gradient(
-     45deg,
-  #00ffd0,
-  #00a37a,
-  #1abc9c,
-  #138d75,
-  #00695c,
-  #00ffd0
-  );
-  background-size: 400%;
-  animation: animateCarousel 25s linear infinite;
-  /* Enmascarado para mostrar solo el borde */
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-   z-index: 0;
-}
+
+
 
 @keyframes animateCarousel {
   0% {
@@ -1135,7 +1111,7 @@ section {
   transform: translate(-50%, -50%);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   transition: transform 0.6s ease, filter 0.6s ease, z-index 0.6s ease, opacity 0.6s ease;
   filter: grayscale(100%);
   opacity: 0;
