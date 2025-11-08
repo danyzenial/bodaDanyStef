@@ -36,6 +36,7 @@ section {
   margin: 0 auto;
   overflow: hidden;
   /* evita scroll */
+  transition: min-height 0.5s ease;
 }
 
 .s1 {
@@ -1249,6 +1250,7 @@ canvas {
   margin-bottom: 50px;
   color: #183e0c;
 }
+
 
 
 
