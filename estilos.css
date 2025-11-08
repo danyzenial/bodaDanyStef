@@ -5,12 +5,17 @@
   --realse: white;
   --colorPrincipal: #f2f8ec; /*#EDEEE7*/
   --colorTexto: #687d5c;
+  --vh: 100vh;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0
+}
+
+html {
+  scroll-behavior: smooth; /* scroll suave */
 }
 
 body {
@@ -23,7 +28,7 @@ body {
 
 /* Decoraci[on section 1 */
 section {
-  height: 100dvh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1244,5 +1249,6 @@ canvas {
   margin-bottom: 50px;
   color: #183e0c;
 }
+
 
 
