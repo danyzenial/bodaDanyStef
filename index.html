@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boda Daniel&Stefany</title>
+    <title>Boda Daniel & Stefany</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
@@ -21,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
@@ -58,10 +54,10 @@
 
         <!-- date Card -->
         <div class="cardDate">
-            <div class="imgCard  animar fade-in">
+            <div class="imgCard animar fade-in">
                 <img src="images/pareja2.jpg" alt="">
             </div>
-            <div class="infoCard  animar fade-in">
+            <div class="infoCard animar fade-in">
 
                 <div class="title-card">
                     <span>¿Cuándo?</span>
@@ -187,7 +183,7 @@
                     <div>Un día para celebrar el amor, merece elegancia.
                         Agradecemos su presencia con atuendo formal.</div>
                     <div>
-                        <i class="fas fa-info-circle"></i> No olvidés el abrigo, el clima es frío
+                        <i class="fas fa-info-circle"></i> No olvidés el abrigo, el clima es frío.
                     </div>
                 </div>
             </div>
@@ -283,143 +279,7 @@
 
 
     <script src="scripts.js"></script>
-    <script>
-        // === Cuenta regresiva ===
-        // Ajusta la fecha destino aquí:
-        // Formato: new Date(YYYY, MM-1, DD, HH, MIN, SEC)
-        // Actualmente: 6 Diciembre, 16:00 (ajusta zona horaria del cliente)
-        const targetDate = new Date(new Date().getFullYear(), 11, 6, 16, 0, 0);
 
-        function pad(n, digits = 2) {
-            return n.toString().padStart(digits, '0');
-        }
-
-        function updateCountdown() {
-            const now = new Date();
-            let diff = Math.max(0, targetDate - now);
-
-            // calcular
-            const secondsTotal = Math.floor(diff / 1000);
-            const days = Math.floor(secondsTotal / (3600 * 24));
-            const hours = Math.floor((secondsTotal % (3600 * 24)) / 3600);
-            const minutes = Math.floor((secondsTotal % 3600) / 60);
-            const seconds = secondsTotal % 60;
-
-            // Mostrar con formato similar al mockup
-            document.getElementById('days').textContent = pad(days, 2);
-            document.getElementById('hours').textContent = pad(hours, 2);
-            document.getElementById('minutes').textContent = pad(minutes, 2);
-            document.getElementById('seconds').textContent = pad(seconds, 2); // se muestra con 3 cifras para reproducir "400"
-        }
-
-        updateCountdown();
-        // Actualiza cada segundo
-        setInterval(updateCountdown, 1000);
-
-        // === Map button: abre Google Maps con dirección (ajusta si hace falta) ===
-        function openMaps(e) {
-            e.preventDefault();
-            const address = encodeURIComponent('Jardines La Esperanza Calle Falsa 123');
-            // abre la app/Google Maps
-            const uri = `https://www.google.com/maps/search/?api=1&query=${address}`;
-            window.open(uri, '_blank');
-        }
-
-        // Accessibility: if JS desactiva, deja valores por defecto
-    </script>
-    <script>
-        // Selecciona todos los elementos que tengan la clase "animar"
-        const elementos = document.querySelectorAll('.animar');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // deja de observar después de animar (opcional)
-                }
-            });
-        }, { threshold: 0.4 }); // se activa cuando el 20% del elemento es visible
-
-        elementos.forEach(el => observer.observe(el));
-    </script>
-    <script>
-        // Espera a que el DOM cargue
-        document.addEventListener("DOMContentLoaded", function () {
-            // Espera 2 segundos adicionales
-            setTimeout(function () {
-                const loader = document.getElementById("loader");
-                loader.style.opacity = "0"; // efecto de desvanecimiento
-                setTimeout(() => {
-                    loader.style.display = "none"; // oculta el loader
-                    //document.getElementById("content").style.display = "block"; // muestra el contenido
-                }, 500); // coincide con la transición CSS
-            }, 3000); // tiempo extra de espera
-        });
-    </script>
-    <script>
-        const audio = document.getElementById("myAudio");
-        const btn = document.getElementById("playPauseBtn");
-
-        btn.addEventListener("click", () => {
-            if (audio.paused) {
-                audio.play();
-                btn.innerHTML = '<i class="fas fa-pause"></i>';  // cambia icono a pausa
-            } else {
-                audio.pause();
-                btn.innerHTML = '<i class="fas fa-play"></i>';  // cambia icono a play
-            }
-        });
-    </script>
-    <script>
-        const items = document.querySelectorAll('.carousel-item');
-        const nextBtn = document.getElementById('next');
-        const prevBtn = document.getElementById('prev');
-        let current = 0;
-
-        function updateCarousel() {
-            const total = items.length;
-            items.forEach(item => {
-                item.style.opacity = 0;
-                item.style.zIndex = 1;
-                item.style.filter = 'grayscale(100%)';
-            });
-
-            const prevIndex = (current - 1 + total) % total;
-            const nextIndex = (current + 1) % total;
-
-            // Imagen central (grande, color)
-            items[current].style.opacity = 1;
-            items[current].style.zIndex = 10;
-            items[current].style.filter = 'grayscale(0%)';
-            items[current].style.transform = 'translate(-50%, -50%) scale(1)';
-
-            // Imagen anterior (arriba, pequeña, parcialmente visible)
-            items[prevIndex].style.opacity = 0.6;
-            items[prevIndex].style.zIndex = 5;
-            items[prevIndex].style.transform = 'translate(-50%, -90%) scale(0.7)';
-
-            // Imagen siguiente (abajo, pequeña, parcialmente visible)
-            items[nextIndex].style.opacity = 0.6;
-            items[nextIndex].style.zIndex = 5;
-            items[nextIndex].style.transform = 'translate(-50%, -10%) scale(0.7)';
-        }
-
-        // Botones
-        nextBtn.addEventListener('click', () => {
-            current = (current + 1) % items.length;
-            updateCarousel();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            current = (current - 1 + items.length) % items.length;
-            updateCarousel();
-        });
-
-        // Inicializa
-        updateCarousel();
-
-
-    </script>
 </body>
 
 </html>
