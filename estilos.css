@@ -64,7 +64,7 @@ section {
 
 /* texto flotante */
 .s1::after {
-  content: "❤ Desliza hacia abajo";
+  content: "\2665  Desliza hacia abajo";
   position: absolute;
   bottom: 6%;
   left: 50%;
@@ -1244,4 +1244,5 @@ canvas {
   margin-bottom: 50px;
   color: #183e0c;
 }
+
 
