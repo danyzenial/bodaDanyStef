@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.style.opacity = "0";
     setTimeout(() => (loader.style.display = "none"), 500);
   }, 3000);
+
+  // Capturar el valor "asientos" de la URL
+  const params = new URLSearchParams(window.location.search);
+  const asientos = params.get("x") || 0; // si no hay valor, mostrar 0
+  document.getElementById("numero-asientos").textContent = asientos;
 });
 
 /////////////////////// MÚSICA
@@ -150,12 +155,3 @@ document.getElementById("prev").onclick = () => {
 };
 
 updateCarousel();
-
-/////Ajuste dinámico de vh para móviles
-function setVh() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-setVh();
-window.addEventListener('resize', setVh);
-  
