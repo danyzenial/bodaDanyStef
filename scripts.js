@@ -150,3 +150,12 @@ document.getElementById("prev").onclick = () => {
 };
 
 updateCarousel();
+
+/////Ajuste dinámico de vh para móviles
+function setVh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVh();
+window.addEventListener('resize', setVh);
+  
