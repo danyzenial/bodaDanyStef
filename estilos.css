@@ -70,14 +70,14 @@ section {
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-  font-size: 1rem;
-  line-height: 0;
+  font-size: 0.9rem;
+  line-height: 1;
   color: white;
   text-align: center;
   padding: 5px 10px;
   border-radius: 20px;
   animation: bounce 1.5s infinite;
-  font-family: "Zain", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
 
